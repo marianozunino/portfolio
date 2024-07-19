@@ -115,7 +115,7 @@ footer {
 }
 
 .muted {
-  color: var(--mediumgray);
+  color: var(--darkgray);
   text-decoration: none;
 }
 
