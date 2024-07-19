@@ -1,0 +1,52 @@
+<head>
+  <script
+    async
+    src="https://analytics.umami.is/script.js"
+    data-website-id="360e23fb-dc51-4801-8584-453e13c2442c"
+  ></script>
+  <meta content="text/html; charset=UTF-8" name="Content-Type" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width" />
+
+  <meta property="og:site_name" content="{{ title }}" />
+  <meta property="og:locale" content="en_US" />
+
+  <meta property="og:title" content="{{ title }}" />
+  <meta property="og:type" content="article" />
+  {% if description %}
+    <meta property="og:description" content="{{ description }}" />
+    <meta name="description" content="{{ description }}" />
+  {% else %}
+    <meta name="description" content="Mariano Zunino's portfolio" />
+    <meta property="og:description" content="Mariano Zunino's portfolio" />
+  {% endif %}
+
+  <meta property="og:image" content="/assets/192.png" />
+  <meta name="author" content="Mariano Zunino" />
+
+  {% if permalink %}
+    <meta property="og:url" content="https://mzunino.com.uy{{ permalink }}" />
+    <link rel="canonical" href="https://mzunino.com.uy{{ permalink }}" />
+  {% else %}
+    <meta property="og:url" content="https://mzunino.com.uy" />
+    <link rel="canonical" href="https://mzunino.com.uy" />
+  {% endif %}
+
+  <link rel="icon" href="/assets/32.png" sizes="32x32" />
+  <link rel="icon" href="/assets/192.png" sizes="192x192" />
+
+  <link rel="icon" href="/assets/favicon.ico" type="image/x-icon" />
+  <title>{{ title }} - Mariano Zunino</title>
+  <link rel="stylesheet" href="{{ '/css/styles.css' }}" />
+  <script>
+    const isDarkMode = () =>
+      localStorage.theme === 'dark' ||
+      (!('theme' in localStorage) &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches)
+    if (isDarkMode()) {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+  </script>
+</head>

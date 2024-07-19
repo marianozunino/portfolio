@@ -1,0 +1,26 @@
+{% extends "base.njk" %}
+{% block main %}
+  <a class="muted small" href="/">← mariano zunino</a>
+  <h1>{{ title }}</h1>
+  {% if deployed %}
+    <a
+      class="port-link"
+      href="{{ deployed }}"
+      target="_blank"
+      rel="noopener noreferrer"
+      `
+      >Deployed</a
+    >
+  {% endif %}
+  {% if source %}
+    <a
+      class="port-link"
+      href="{{ source }}"
+      target="_blank"
+      rel="noopener noreferrer"
+      `
+      >Source</a
+    >
+  {% endif %}
+  {{ content | safe }}
+{% endblock %}

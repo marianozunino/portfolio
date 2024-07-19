@@ -1,0 +1,25 @@
+{% extends "base.njk" %}
+{% block main %}
+  <header style="display: flex; align-items: center;">
+    <img
+      width="60px"
+      src="assets/profile.jpg"
+      alt="Description of photo"
+      style="margin-right: 10px; border-radius: 10px;"
+    />
+    <h1 style="margin: 0;">{{ main }}<span id="toggleDarkMode">*</span></h1>
+  </header>
+  {{ content | safe }}
+  <hr />
+  <h2>Projects</h2>
+  <ul>
+    {% for portfolio in collections.portfolio %}
+      <li>
+        <a class="post-link" href="{{ portfolio.url }}"
+          >{{ portfolio.data.title }}</a
+        >
+        - {{ portfolio.data.summary }}
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}

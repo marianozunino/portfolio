@@ -1,0 +1,14 @@
+{% extends "base.njk" %}
+{% block main %}
+  <a class="muted small" href="/">← mariano zunino</a>
+  <div style="display: flex; align-items: center;">
+    <img
+      width="60px"
+      src="../assets/profile.jpg"
+      alt="Description of photo"
+      style="margin-right: 10px; border-radius: 10px;"
+    />
+    <h1>{{ title }}</h1>
+  </div>
+  {{ content | safe }}
+{% endblock %}

@@ -1,0 +1,28 @@
+{
+  "name": "portfolio",
+  "author": "Mariano Zunino",
+  "license": "ISC",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "eleventy --serve",
+    "build": "eleventy",
+    "format:check": "prettier --check .",
+    "format:write": "prettier --write .",
+    "lint:check": "eslint .",
+    "lint:fix": "eslint --fix ."
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
+    "eslint": "^8",
+    "prettier-plugin-jinja-template": "1.4.1"
+  },
+  "dependencies": {
+    "eslint-config-prettier": "^9.1.0",
+    "markdown-it": "^14.1.0",
+    "markdown-it-checkbox": "^1.1.0",
+    "prettier": "^3.3.3"
+  }
+}
