@@ -19,6 +19,10 @@ In addition to my software work, I have a strong interest in teaching and sharin
 knowledge. As a professor at FING, I strive to contribute to the community by
 training and educating others.
 
+Did I mention that I have two lovely dogs 🐕❤️? They are named <a href="/assets/rocco.jpg">Rocco</a> and <a href="/assets/mora.jpg">Mora</a>!
+And here's a photo of them together <a href="/assets/babies.jpg">Dogs</a>.
+
+
 ## Contact
 - [CV](/assets/cv.pdf)
 - Email me at marianoz [at] posteo [dot] net
