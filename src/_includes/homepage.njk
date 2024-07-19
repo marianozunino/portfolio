@@ -4,10 +4,13 @@
     <img
       width="60px"
       src="assets/profile.jpg"
-      alt="Description of photo"
+      alt="My profile picture"
       style="margin-right: 10px; border-radius: 10px;"
     />
-    <h1 style="margin: 0;">{{ main }}<span id="toggleDarkMode">*</span></h1>
+    <div class="header-container">
+      <h1 style="margin: 0;">{{ main }}</h1>
+      <span id="toggleDarkMode" class="fas fa-moon"></span>
+    </div>
   </header>
   {{ content | safe }}
   <hr />

@@ -297,3 +297,15 @@ blockquote {
   color: var(--main-text);
   opacity: 0.8;
 }
+
+#toggleDarkMode {
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.header-container {
+   display: flex;
+   align-items: center; /* Align items vertically */
+   justify-content: space-between; /* Space between items */
+ }
+

@@ -5,6 +5,17 @@
     {% block main %}
     {% endblock %}
     <script>
+      function updateToggleButtonText() {
+        const toggleButton = document.getElementById('toggleDarkMode')
+        if (isDarkMode()) {
+          toggleButton.classList.remove('fa-moon')
+          toggleButton.classList.add('fa-sun')
+        } else {
+          toggleButton.classList.remove('fa-sun')
+          toggleButton.classList.add('fa-moon')
+        }
+      }
+
       document
         .getElementById('toggleDarkMode')
         .addEventListener('click', function () {
@@ -17,6 +28,11 @@
           }
           updateToggleButtonText()
         })
+
+      // Initial update for button text based on saved theme
+      if (localStorage.theme === 'dark') {
+        document.documentElement.classList.add('dark')
+      }
       updateToggleButtonText()
     </script>
   </body>
