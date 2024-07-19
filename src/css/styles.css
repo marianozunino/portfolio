@@ -1,7 +1,7 @@
 :root {
-  --background: #fafafa;
+  --background: #fdf6e3;
   --main-text: #121212;
-  --lightgray: #eee;
+  --lightgray: #002b36;
   --darkgray: #111;
   --mediumgray: #aaa;
   --black: #000;
@@ -13,6 +13,7 @@
   --background: rgba(24, 24, 24, 1);
   --main-text: #e4e4e4;
   --darkgray: #e4e4e4;
+  --lightgray: #657b83;
   --link: #6aa7dc;
 }
 
