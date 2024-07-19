@@ -6,5 +6,5 @@ title: Home
 
 Software engineer, professor and gamer. Based in Montevideo, Uruguay.
 
-More [about me](/about/).
+Here's more [about me](/about/)
 
