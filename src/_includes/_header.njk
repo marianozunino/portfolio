@@ -3,23 +3,49 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width" />
 
+  <!-- Facebook Meta Tags -->
+  <meta property="og:url" content="https://mzunino.com.uy{{ permalink }}" />
+  <meta property="og:title" content="{{ title }}" />
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary" />
+  <meta property="twitter:domain" content="mzunino.com.uy" />
+  <meta
+    property="twitter:url"
+    content="https://mzunino.com.uy{{ permalink }}"
+  />
+  <meta name="twitter:title" content="{{ title }}" />
+
   <meta property="og:site_name" content="{{ title }}" />
   <meta property="og:locale" content="en_US" />
-
-  <meta property="og:title" content="{{ title }}" />
   <meta property="og:type" content="article" />
+  <meta property="og:author" content="Mariano Zunino" />
+
   {% if description %}
-    <meta property="og:description" content="{{ description }}" />
+    <meta name="twitter:description" content="{{ description }}" />
     <meta name="description" content="{{ description }}" />
+    <meta property="og:description" content="{{ description }}" />
   {% else %}
+    <meta name="twitter:description" content="Mariano Zunino's portfolio" />
     <meta name="description" content="Mariano Zunino's portfolio" />
     <meta property="og:description" content="Mariano Zunino's portfolio" />
   {% endif %}
 
-  <meta
-    property="og:image"
-    content="{{ '/assets/android-chrome-192x192.png' }}"
-  />
+  {% if image %}
+    <meta name="twitter:image" content="https://mzunino.com.uy{{ image }}" />
+    <meta property="og:image" content="https://mzunino.com.uy{{ image }}" />
+    <meta property="og:image:width" content="200" />
+    <meta property="og:image:height" content="200" />
+  {% else %}
+    <meta
+      name="twitter:image"
+      content="https://mzunino.com.uy/assets/android-chrome-192x192.png"
+    />
+    <meta
+      property="og:image"
+      content="https://mzunino.com.uy/assets/android-chrome-192x192.png"
+    />
+  {% endif %}
 
   <meta
     name="google-site-verification"

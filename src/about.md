@@ -3,6 +3,7 @@ layout: 'about.njk'
 title: About Me
 description: "I'm Mariano, a software engineer from Montevideo, Uruguay. I pursued my Tecnólogo en Informática degree at Fing after several years working as an IT Technician (which comes handy when dealing with infrastructure)."
 permalink: /about/
+image: '/assets/profile.jpg'
 ---
 Hello!
 
