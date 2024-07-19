@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  <script
+    async
+    src="https://analytics.umami.is/script.js"
+    data-website-id="360e23fb-dc51-4801-8584-453e13c2442c"
+  ></script>
+  <meta content="text/html; charset=UTF-8" name="Content-Type" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width" />
+
+  <meta property="og:site_name" content="SDM UI" />
+  <meta property="og:locale" content="en_US" />
+
+  <meta property="og:title" content="SDM UI" />
+  <meta property="og:type" content="article" />
+  
+    <meta name="description" content="Mariano Zunino's portfolio" />
+    <meta property="og:description" content="Mariano Zunino's portfolio" />
+  
+
+  <meta property="og:image" content="/assets/192.png" />
+  <meta name="author" content="Mariano Zunino" />
+
+  
+    <meta property="og:url" content="https://mzunino.com.uy/sdm-ui/" />
+    <link rel="canonical" href="https://mzunino.com.uy/sdm-ui/" />
+  
+
+  <link rel="icon" href="/assets/32.png" sizes="32x32" />
+  <link rel="icon" href="/assets/192.png" sizes="192x192" />
+
+  <link rel="icon" href="/assets/favicon.ico" type="image/x-icon" />
+  <title>SDM UI - Mariano Zunino</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script>
+    const isDarkMode = () =>
+      localStorage.theme === 'dark' ||
+      (!('theme' in localStorage) &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches)
+    if (isDarkMode()) {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+  </script>
+</head>
+
+  <body>
+    
+  <a class="muted small" href="/">← mariano zunino</a>
+  <h1>SDM UI</h1>
+  
+  
+    <a
+      class="port-link"
+      href="https://github.com/marianozunino/sdm-ui"
+      target="_blank"
+      rel="noopener noreferrer"
+      `
+      >Source</a
+    >
+  
+  <h4>Overview</h4>
+<p>SDM UI is a custom wrapper around StrongDM (SDM) designed to improve the developer experience (DX) on Linux.</p>
+<h4>Motivation</h4>
+<p>While working for an employer who utilized StrongDM for service access management,
+I encountered limitations with the available tools. SDM offers both a CLI and a GUI,
+but the GUI was only available for macOS at the time. Although I generally prefer
+using the CLI, managing hundreds of connections via the GUI became necessary and
+cumbersome on Linux.</p>
+<p>Initially, I used a combination of CLI tools such as <code>sdm</code>, <code>grep</code>, <code>column</code>,
+and <code>fzf</code> to streamline the workflow. This solution, while functional, fell short
+of my expectations.</p>
+<h4>Solution</h4>
+<p>I faced two options:</p>
+<ul>
+<li>Write a shell script to handle the complexities.</li>
+<li>Develop a wrapper using a general-purpose language.</li>
+</ul>
+<p>Given the limitations of shell scripting, particularly with handling arrays, I
+opted for the latter approach. This decision allowed me to leverage existing
+libraries to build a robust solution.</p>
+<h4>Implementation</h4>
+<p>SDM UI integrates the following libraries:</p>
+<ul>
+<li><strong>rofi</strong>: Provides a user-friendly GUI for connection management.</li>
+<li><strong>keyring</strong>: Manages and stores credentials securely.</li>
+<li><strong>clipper</strong>: A clipboard manager for efficient copy-pasting.</li>
+<li><strong>bbolt</strong>: A performant key-value database for storing connection details.</li>
+</ul>
+<p>This combination resulted in a more efficient and user-friendly tool for managing
+StrongDM connections on Linux.</p>
+<p>By creating SDM UI, I improved the overall developer experience, making it easier
+to manage numerous connections and enhancing productivity.</p>
+
+
+    <script>
+      document
+        .getElementById('toggleDarkMode')
+        .addEventListener('click', function () {
+          if (isDarkMode()) {
+            localStorage.theme = 'light'
+            document.documentElement.classList.remove('dark')
+          } else {
+            localStorage.theme = 'dark'
+            document.documentElement.classList.add('dark')
+          }
+          updateToggleButtonText()
+        })
+      updateToggleButtonText()
+    </script>
+  </body>
+</html>

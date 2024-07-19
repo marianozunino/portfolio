@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  <script
+    async
+    src="https://analytics.umami.is/script.js"
+    data-website-id="360e23fb-dc51-4801-8584-453e13c2442c"
+  ></script>
+  <meta content="text/html; charset=UTF-8" name="Content-Type" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width" />
+
+  <meta property="og:site_name" content="Go Dollar" />
+  <meta property="og:locale" content="en_US" />
+
+  <meta property="og:title" content="Go Dollar" />
+  <meta property="og:type" content="article" />
+  
+    <meta name="description" content="Mariano Zunino's portfolio" />
+    <meta property="og:description" content="Mariano Zunino's portfolio" />
+  
+
+  <meta property="og:image" content="/assets/192.png" />
+  <meta name="author" content="Mariano Zunino" />
+
+  
+    <meta property="og:url" content="https://mzunino.com.uy/go-dollar/" />
+    <link rel="canonical" href="https://mzunino.com.uy/go-dollar/" />
+  
+
+  <link rel="icon" href="/assets/32.png" sizes="32x32" />
+  <link rel="icon" href="/assets/192.png" sizes="192x192" />
+
+  <link rel="icon" href="/assets/favicon.ico" type="image/x-icon" />
+  <title>Go Dollar - Mariano Zunino</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script>
+    const isDarkMode = () =>
+      localStorage.theme === 'dark' ||
+      (!('theme' in localStorage) &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches)
+    if (isDarkMode()) {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+  </script>
+</head>
+
+  <body>
+    
+  <a class="muted small" href="/">← mariano zunino</a>
+  <h1>Go Dollar</h1>
+  
+  
+    <a
+      class="port-link"
+      href="https://github.com/marianozunino/goashot"
+      target="_blank"
+      rel="noopener noreferrer"
+      `
+      >Source</a
+    >
+  
+  <h4>Overview</h4>
+<p>Go Dollars fetches the US Dollar price from the <a href="https://www.gub.uy/instituto-nacional-estadistica/">INE</a> for the last recent years.</p>
+<h4>Motivation</h4>
+<p>A while back there was a site that provided an history of the US Dollar compared to my local currency (UYU).
+In order to provide this information, I created a GoLang project that scraps it from a XLS.</p>
+<h4>Solution</h4>
+
+
+    <script>
+      document
+        .getElementById('toggleDarkMode')
+        .addEventListener('click', function () {
+          if (isDarkMode()) {
+            localStorage.theme = 'light'
+            document.documentElement.classList.remove('dark')
+          } else {
+            localStorage.theme = 'dark'
+            document.documentElement.classList.add('dark')
+          }
+          updateToggleButtonText()
+        })
+      updateToggleButtonText()
+    </script>
+  </body>
+</html>

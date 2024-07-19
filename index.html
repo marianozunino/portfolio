@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  <script
+    async
+    src="https://analytics.umami.is/script.js"
+    data-website-id="360e23fb-dc51-4801-8584-453e13c2442c"
+  ></script>
+  <meta content="text/html; charset=UTF-8" name="Content-Type" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width" />
+
+  <meta property="og:site_name" content="Home" />
+  <meta property="og:locale" content="en_US" />
+
+  <meta property="og:title" content="Home" />
+  <meta property="og:type" content="article" />
+  
+    <meta name="description" content="Mariano Zunino's portfolio" />
+    <meta property="og:description" content="Mariano Zunino's portfolio" />
+  
+
+  <meta property="og:image" content="/assets/192.png" />
+  <meta name="author" content="Mariano Zunino" />
+
+  
+    <meta property="og:url" content="https://mzunino.com.uy" />
+    <link rel="canonical" href="https://mzunino.com.uy" />
+  
+
+  <link rel="icon" href="/assets/32.png" sizes="32x32" />
+  <link rel="icon" href="/assets/192.png" sizes="192x192" />
+
+  <link rel="icon" href="/assets/favicon.ico" type="image/x-icon" />
+  <title>Home - Mariano Zunino</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script>
+    const isDarkMode = () =>
+      localStorage.theme === 'dark' ||
+      (!('theme' in localStorage) &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches)
+    if (isDarkMode()) {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+  </script>
+</head>
+
+  <body>
+    
+  <header style="display: flex; align-items: center;">
+    <img
+      width="60px"
+      src="assets/profile.jpg"
+      alt="Description of photo"
+      style="margin-right: 10px; border-radius: 10px;"
+    />
+    <h1 style="margin: 0;">Mariano Zunino<span id="toggleDarkMode">*</span></h1>
+  </header>
+  <p>Software engineer, professor and gamer. Based in Montevideo, Uruguay.</p>
+<p>More <a href="/about/">about me</a>.</p>
+
+  <hr />
+  <h2>Projects</h2>
+  <ul>
+    
+      <li>
+        <a class="post-link" href="/sdm-ui/"
+          >SDM UI</a
+        >
+        - An ugly sdm (strong DM) wrapper to get a better DX under linux.
+      </li>
+    
+      <li>
+        <a class="post-link" href="/morpheus/"
+          >Morpheus</a
+        >
+        - Morpheus is database migration tool for Neo4j written in Typescript
+      </li>
+    
+      <li>
+        <a class="post-link" href="/openssl-ts/"
+          >OpenSSL TS Wrapper</a
+        >
+        - OpenSSL TS Wrapper: Simplifying OpenSSL Usage in Node.js
+      </li>
+    
+      <li>
+        <a class="post-link" href="/go-sync-cal/"
+          >Go Sync Cal</a
+        >
+        - Go Sync Cal: Synchronize Your Google Calendars
+      </li>
+    
+      <li>
+        <a class="post-link" href="/go-ashot/"
+          >Go Ashot</a
+        >
+        - Go Ashot: Managing Custom Food Orders with GoLang
+      </li>
+    
+      <li>
+        <a class="post-link" href="/go-dollar/"
+          >Go Dollar</a
+        >
+        - Go Dollar is a GoLang project that allows users to place food orders on Rappi.com.uy
+      </li>
+    
+  </ul>
+
+    <script>
+      document
+        .getElementById('toggleDarkMode')
+        .addEventListener('click', function () {
+          if (isDarkMode()) {
+            localStorage.theme = 'light'
+            document.documentElement.classList.remove('dark')
+          } else {
+            localStorage.theme = 'dark'
+            document.documentElement.classList.add('dark')
+          }
+          updateToggleButtonText()
+        })
+      updateToggleButtonText()
+    </script>
+  </body>
+</html>

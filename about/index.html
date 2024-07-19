@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  <script
+    async
+    src="https://analytics.umami.is/script.js"
+    data-website-id="360e23fb-dc51-4801-8584-453e13c2442c"
+  ></script>
+  <meta content="text/html; charset=UTF-8" name="Content-Type" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width" />
+
+  <meta property="og:site_name" content="About Me" />
+  <meta property="og:locale" content="en_US" />
+
+  <meta property="og:title" content="About Me" />
+  <meta property="og:type" content="article" />
+  
+    <meta name="description" content="Mariano Zunino's portfolio" />
+    <meta property="og:description" content="Mariano Zunino's portfolio" />
+  
+
+  <meta property="og:image" content="/assets/192.png" />
+  <meta name="author" content="Mariano Zunino" />
+
+  
+    <meta property="og:url" content="https://mzunino.com.uy/about/" />
+    <link rel="canonical" href="https://mzunino.com.uy/about/" />
+  
+
+  <link rel="icon" href="/assets/32.png" sizes="32x32" />
+  <link rel="icon" href="/assets/192.png" sizes="192x192" />
+
+  <link rel="icon" href="/assets/favicon.ico" type="image/x-icon" />
+  <title>About Me - Mariano Zunino</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script>
+    const isDarkMode = () =>
+      localStorage.theme === 'dark' ||
+      (!('theme' in localStorage) &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches)
+    if (isDarkMode()) {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+  </script>
+</head>
+
+  <body>
+    
+  <a class="muted small" href="/">← mariano zunino</a>
+  <div style="display: flex; align-items: center;">
+    <img
+      width="60px"
+      src="../assets/profile.jpg"
+      alt="Description of photo"
+      style="margin-right: 10px; border-radius: 10px;"
+    />
+    <h1>About Me</h1>
+  </div>
+  <p>Hello!</p>
+<p>I'm Mariano, a software engineer from Montevideo, Uruguay. I pursued my Tecnólogo en Informática
+degree at <a href="https://www.fing.edu.uy/" target="_blank">Fing</a> after several years
+working as an IT Technician (which comes handy when dealing with infrastructure).</p>
+<p>I enjoy expanding my knowledge and although I wouldn't call myself a bookworm,
+I love reading compelling books, especially those on computer science.</p>
+<p>Building side projects is another passion of mine, both for enjoyment and profit.
+For the former, I often collaborate with my brother <a href="https://totozunino.github.io/portfolio/" target="_blank">Mathias</a>.</p>
+<p>In addition to my software work, I have a strong interest in teaching and sharing
+knowledge. As a professor at FING, I strive to contribute to the community by
+training and educating others.</p>
+<h2>Contact</h2>
+<ul>
+<li><a href="/assets/cv.pdf">CV</a></li>
+<li>Email me at marianoz [at] posteo [dot] net</li>
+<li><a href="https://github.com/marianozunino" target="_blank">Github</a></li>
+<li><a href="https://linkedin.com/in/mariano-z" target="_blank">LinkedIn</a></li>
+</ul>
+
+
+    <script>
+      document
+        .getElementById('toggleDarkMode')
+        .addEventListener('click', function () {
+          if (isDarkMode()) {
+            localStorage.theme = 'light'
+            document.documentElement.classList.remove('dark')
+          } else {
+            localStorage.theme = 'dark'
+            document.documentElement.classList.add('dark')
+          }
+          updateToggleButtonText()
+        })
+      updateToggleButtonText()
+    </script>
+  </body>
+</html>

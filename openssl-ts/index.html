@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  <script
+    async
+    src="https://analytics.umami.is/script.js"
+    data-website-id="360e23fb-dc51-4801-8584-453e13c2442c"
+  ></script>
+  <meta content="text/html; charset=UTF-8" name="Content-Type" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width" />
+
+  <meta property="og:site_name" content="OpenSSL TS Wrapper" />
+  <meta property="og:locale" content="en_US" />
+
+  <meta property="og:title" content="OpenSSL TS Wrapper" />
+  <meta property="og:type" content="article" />
+  
+    <meta name="description" content="Mariano Zunino's portfolio" />
+    <meta property="og:description" content="Mariano Zunino's portfolio" />
+  
+
+  <meta property="og:image" content="/assets/192.png" />
+  <meta name="author" content="Mariano Zunino" />
+
+  
+    <meta property="og:url" content="https://mzunino.com.uy/openssl-ts/" />
+    <link rel="canonical" href="https://mzunino.com.uy/openssl-ts/" />
+  
+
+  <link rel="icon" href="/assets/32.png" sizes="32x32" />
+  <link rel="icon" href="/assets/192.png" sizes="192x192" />
+
+  <link rel="icon" href="/assets/favicon.ico" type="image/x-icon" />
+  <title>OpenSSL TS Wrapper - Mariano Zunino</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script>
+    const isDarkMode = () =>
+      localStorage.theme === 'dark' ||
+      (!('theme' in localStorage) &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches)
+    if (isDarkMode()) {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+  </script>
+</head>
+
+  <body>
+    
+  <a class="muted small" href="/">← mariano zunino</a>
+  <h1>OpenSSL TS Wrapper</h1>
+  
+  
+    <a
+      class="port-link"
+      href="https://github.com/marianozunino/openssl-ts"
+      target="_blank"
+      rel="noopener noreferrer"
+      `
+      >Source</a
+    >
+  
+  <h4>Overview</h4>
+<p>OpenSSL TS Wrapper is a modern, dependency-free OpenSSL wrapper written in TypeScript.</p>
+<h4>Motivation</h4>
+<p>While working on a project, I encountered numerous challenges when using OpenSSL with Node.js. These included parsing strings, validating outputs, handling exit codes, and managing other boilerplate tasks. The complexity and repetitive nature of these tasks highlighted the need for a simpler, more intuitive interface.</p>
+<h4>Solution</h4>
+<p>To address these issues, I developed the OpenSSL TS Wrapper in TypeScript. This wrapper standardizes the interaction with OpenSSL binaries, offering a consistent and easy-to-use interface. Although it's not groundbreaking, it significantly reduces the complexity and boilerplate code required for working with OpenSSL in Node.js.</p>
+
+
+    <script>
+      document
+        .getElementById('toggleDarkMode')
+        .addEventListener('click', function () {
+          if (isDarkMode()) {
+            localStorage.theme = 'light'
+            document.documentElement.classList.remove('dark')
+          } else {
+            localStorage.theme = 'dark'
+            document.documentElement.classList.add('dark')
+          }
+          updateToggleButtonText()
+        })
+      updateToggleButtonText()
+    </script>
+  </body>
+</html>

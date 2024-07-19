@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  <script
+    async
+    src="https://analytics.umami.is/script.js"
+    data-website-id="360e23fb-dc51-4801-8584-453e13c2442c"
+  ></script>
+  <meta content="text/html; charset=UTF-8" name="Content-Type" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width" />
+
+  <meta property="og:site_name" content="Open Commerce" />
+  <meta property="og:locale" content="en_US" />
+
+  <meta property="og:title" content="Open Commerce" />
+  <meta property="og:type" content="article" />
+  
+    <meta name="description" content="Mariano Zunino's portfolio" />
+    <meta property="og:description" content="Mariano Zunino's portfolio" />
+  
+
+  <meta property="og:image" content="/assets/192.png" />
+  <meta name="author" content="Mariano Zunino" />
+
+  
+    <meta property="og:url" content="https://mzunino.com.uy/open-commerce/" />
+    <link rel="canonical" href="https://mzunino.com.uy/open-commerce/" />
+  
+
+  <link rel="icon" href="/assets/32.png" sizes="32x32" />
+  <link rel="icon" href="/assets/192.png" sizes="192x192" />
+
+  <link rel="icon" href="/assets/favicon.ico" type="image/x-icon" />
+  <title>Open Commerce - Mariano Zunino</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+  <script>
+    const isDarkMode = () =>
+      localStorage.theme === 'dark' ||
+      (!('theme' in localStorage) &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches)
+    if (isDarkMode()) {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+  </script>
+</head>
+
+  <body>
+    
+  <a class="muted small" href="/">← mariano zunino</a>
+  <h1>Open Commerce</h1>
+  
+    <a
+      class="port-link"
+      href="https://www.stuzo.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      `
+      >Deployed</a
+    >
+  
+  
+  <p>A full-stack app generating daily quotes to inspire, intrigue or contemplate. Built with HTML,
+CSS, Javascript and Firebase to replace a previous NodeJS/PostgreSQL backend.
+<img src="/assets/images/366.webp" alt="366 app screenshot" title="366"></p>
+<p>366 was the product of wanting to learn about optimising API requests, data caching and a very old
+set of 'quote' cards I owned as a child. The cards each had a date on one side and an interesting quote,
+proverb or fact on the other; the reader was encouraged to only look at one per day and to reflect,
+ponder and disaect the content. I always flicked through until I found one I liked or that felt pertinent at
+the time which was, of course, completely beside the point.</p>
+<p>I originally built a NodeJS server with a PostgreSQL database that contained 366 quotes each assigned to
+a specific day of the year. The simple, responsive front-end would make an API call based on the date and retrieve
+the quote and cache it locally, never making another request until the date changed.</p>
+<p>The process worked well and was fast and efficient. I moved over to a Firebase storage and serverless
+implementation simply as a way to refactor the code and learn about a new technology. Users can easily share the quote of
+the day to Twitter or set it as their homepage to have an interesting prompt to start the morning.</p>
+
+
+    <script>
+      document
+        .getElementById('toggleDarkMode')
+        .addEventListener('click', function () {
+          if (isDarkMode()) {
+            localStorage.theme = 'light'
+            document.documentElement.classList.remove('dark')
+          } else {
+            localStorage.theme = 'dark'
+            document.documentElement.classList.add('dark')
+          }
+          updateToggleButtonText()
+        })
+      updateToggleButtonText()
+    </script>
+  </body>
+</html>
