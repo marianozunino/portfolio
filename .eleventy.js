@@ -6,9 +6,9 @@ const markdownItCheckbox = require('markdown-it-checkbox')
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(syntaxHighlight)
 
-  eleventyConfig.addPassthroughCopy('./src/google4e424f6f91e7baa4.html')
   eleventyConfig.addPassthroughCopy('./src/css')
   eleventyConfig.addPassthroughCopy('./src/assets')
+  eleventyConfig.addPassthroughCopy({ './google/*': '/' })
 
   eleventyConfig.addFilter('postDate', (dateObj) => {
     return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED)
@@ -26,11 +26,10 @@ module.exports = function (eleventyConfig) {
       .sort((a, b) => a.data.position - b.data.position)
   })
 
-  let options = {
+  let md = markdownIt({
     html: true,
-  }
+  }).use(markdownItCheckbox)
 
-  let md = markdownIt(options).use(markdownItCheckbox)
   md.render('[ ] unchecked')
   md.render('[x] checked')
 
