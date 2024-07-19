@@ -1,6 +1,9 @@
 {% extends "base.njk" %}
 {% block main %}
-  <a class="muted small" href="/">← mariano zunino</a>
+  <a class="muted small" href="/">
+    <i class="fa-solid fa-arrow-left"></i>
+    mariano zunino
+  </a>
   <h1>{{ title }}</h1>
   {% if deployed %}
     <a
