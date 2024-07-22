@@ -2,9 +2,9 @@
 layout: 'portfolio.njk'
 title: 'SDM UI'
 permalink: /sdm-ui/
-summary: An ugly sdm (strong DM) wrapper to get a better DX under linux.
+summary: An ugly sdm (strong DM) wrapper to get a better DX under linux
 source: https://github.com/marianozunino/sdm-ui
-description: 'Project: An ugly sdm (strong DM) wrapper to get a better DX under linux.'
+description: 'Project: An ugly sdm (strong DM) wrapper to get a better DX under linux'
 position: 0
 hidden: false
 ---

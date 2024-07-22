@@ -18,6 +18,9 @@
   <ul>
     {% for portfolio in collections.portfolio %}
       <li>
+        {% if portfolio.data.source %}
+          <i class="fa-regular fa-file-code"></i>
+        {% endif %}
         <a class="post-link" href="{{ portfolio.url }}"
           >{{ portfolio.data.title }}</a
         >
