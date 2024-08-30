@@ -22,3 +22,11 @@ Go Ashot was developed to automate and streamline the process of customizing and
 
 Once all the orders are ready, corporate can place the collective order directly on Rappi's site.
 
+---
+#####  Update 2024-08-30
+
+This proyect originally used [Uber Fx](https://github.com/uber-go/fx) as a dependency management tool. Not a fan of that, so I decided to go with the
+classic DI management. Also I took that opportunity to migrate the project to [HTMX](https://github.com/bigskysoftware/htmx) along with [Templ](https://github.com/a-h/templ).
+
+For reference I left those code changes in a separate branch [go-ashot-htmx](https://github.com/marianozunino/goashot/tree/htmx).
+
