@@ -4,7 +4,7 @@ title: 'Geo Punch'
 permalink: /geo-punch/
 summary: "Geo Punch is a GoLang+Flutter project that allows users to clock in and out for work"
 description: 'Geo Punch is a GoLang+Flutter project that allows users to clock in and out for work'
-position: -1
+position: 2
 hidden: false
 ---
 

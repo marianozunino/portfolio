@@ -5,7 +5,7 @@ permalink: /sdm-ui/
 summary: An ugly sdm (strong DM) wrapper to get a better DX under linux
 source: https://github.com/marianozunino/sdm-ui
 description: 'Project: An ugly sdm (strong DM) wrapper to get a better DX under linux'
-position: 0
+position: 1
 hidden: false
 ---
 #### Overview
