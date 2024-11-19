@@ -14,10 +14,10 @@
     "lint:fix": "eslint --fix ."
   },
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy": "^3.0.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
     "eslint": "^8",
-    "prettier-plugin-jinja-template": "1.4.1"
+    "prettier-plugin-jinja-template": "2.0.0"
   },
   "dependencies": {
     "eslint-config-prettier": "^9.1.0",

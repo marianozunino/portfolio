@@ -20,32 +20,33 @@
   <meta property="og:locale" content="en_US" />
   <meta property="og:type" content="article" />
   <meta property="og:author" content="Mariano Zunino" />
+  <meta name="generator" content="{{ eleventy.generator }}" />
 
-  {% if description %}
-    <meta name="twitter:description" content="{{ description }}" />
-    <meta name="description" content="{{ description }}" />
-    <meta property="og:description" content="{{ description }}" />
-  {% else %}
-    <meta name="twitter:description" content="Mariano Zunino's portfolio" />
-    <meta name="description" content="Mariano Zunino's portfolio" />
-    <meta property="og:description" content="Mariano Zunino's portfolio" />
-  {% endif %}
+{% if description %}
+  <meta name="twitter:description" content="{{ description }}" />
+  <meta name="description" content="{{ description }}" />
+  <meta property="og:description" content="{{ description }}" />
+{% else %}
+  <meta name="twitter:description" content="Mariano Zunino's portfolio" />
+  <meta name="description" content="Mariano Zunino's portfolio" />
+  <meta property="og:description" content="Mariano Zunino's portfolio" />
+{% endif %}
 
-  {% if image %}
-    <meta name="twitter:image" content="https://mzunino.com.uy{{ image }}" />
-    <meta property="og:image" content="https://mzunino.com.uy{{ image }}" />
-    <meta property="og:image:width" content="200" />
-    <meta property="og:image:height" content="200" />
-  {% else %}
-    <meta
-      name="twitter:image"
-      content="https://mzunino.com.uy/assets/android-chrome-192x192.png"
-    />
-    <meta
-      property="og:image"
-      content="https://mzunino.com.uy/assets/android-chrome-192x192.png"
-    />
-  {% endif %}
+{% if image %}
+  <meta name="twitter:image" content="https://mzunino.com.uy{{ image }}" />
+  <meta property="og:image" content="https://mzunino.com.uy{{ image }}" />
+  <meta property="og:image:width" content="200" />
+  <meta property="og:image:height" content="200" />
+{% else %}
+  <meta
+    name="twitter:image"
+    content="https://mzunino.com.uy/assets/android-chrome-192x192.png"
+  />
+  <meta
+    property="og:image"
+    content="https://mzunino.com.uy/assets/android-chrome-192x192.png"
+  />
+{% endif %}
 
   <meta
     name="google-site-verification"
@@ -54,13 +55,13 @@
 
   <meta name="author" content="Mariano Zunino" />
 
-  {% if permalink %}
-    <meta property="og:url" content="https://mzunino.com.uy{{ permalink }}" />
-    <link rel="canonical" href="https://mzunino.com.uy{{ permalink }}" />
-  {% else %}
-    <meta property="og:url" content="https://mzunino.com.uy" />
-    <link rel="canonical" href="https://mzunino.com.uy" />
-  {% endif %}
+{% if permalink %}
+  <meta property="og:url" content="https://mzunino.com.uy{{ permalink }}" />
+  <link rel="canonical" href="https://mzunino.com.uy{{ permalink }}" />
+{% else %}
+  <meta property="og:url" content="https://mzunino.com.uy" />
+  <link rel="canonical" href="https://mzunino.com.uy" />
+{% endif %}
 
   <link
     rel="apple-touch-icon"
