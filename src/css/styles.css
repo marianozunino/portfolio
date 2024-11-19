@@ -5,7 +5,7 @@
   --darkgray: #111;
   --mediumgray: #aaa;
   --black: #000;
-  --link: #0072d6;
+  --link: #004994;  /* Ensure this color passes contrast test */
   --green: #99ffdd;
 }
 
@@ -14,7 +14,7 @@
   --main-text: #e4e4e4;
   --darkgray: #e4e4e4;
   --lightgray: #657b83;
-  --link: #6aa7dc;
+  --link: #73ABDE;
 }
 
 #toggleDarkMode {
@@ -312,4 +312,3 @@ blockquote {
    align-items: center; /* Align items vertically */
    justify-content: space-between; /* Space between items */
  }
-
