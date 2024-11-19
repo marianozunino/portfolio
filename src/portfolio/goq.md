@@ -2,7 +2,7 @@
 layout: 'portfolio.njk'
 title: 'GOQ (Goku)'
 permalink: /goq/
-summary: A simple CLI tool for consuming RabbitMQ messages and saving them to files.
+summary: A simple CLI tool for consuming RabbitMQ messages and saving them to files
 source: https://github.com/marianozunino/goq
 description: 'Project: A lightweight CLI for RabbitMQ message consumption.'
 position: 0
