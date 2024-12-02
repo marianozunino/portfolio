@@ -1,0 +1,72 @@
+---
+permalink: /go/index.html
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Go Packages - {{ site.domain }}</title>
+    <style>
+      body {
+        font-family:
+          system-ui,
+          -apple-system,
+          sans-serif;
+        line-height: 1.5;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+      .package {
+        margin-bottom: 2rem;
+        padding: 1rem;
+        border: 1px solid #eee;
+        border-radius: 4px;
+      }
+      .package h2 {
+        margin-top: 0;
+      }
+      .package-meta {
+        color: #666;
+        font-size: 0.9rem;
+      }
+      a {
+        color: #0366d6;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Go Packages</h1>
+
+    {% for package in gopackages.packages %}
+      <div class="package">
+        <h2>
+          <a href="https://pkg.go.dev/{{ site.domain }}/go/{{ package.name }}">
+            {{ package.name }}
+          </a>
+        </h2>
+        <div class="package-meta">
+          Repository: <a href="https://{{ package.repo }}">{{ package.repo }}</a
+          ><br />
+          Import path: <code>{{ site.domain }}/go/{{ package.name }}</code>
+        </div>
+        {% if package.description %}
+          <p>{{ package.description }}</p>
+        {% endif %}
+      </div>
+    {% endfor %}
+
+    <footer>
+      <p>
+        To use any of these packages, run:<br />
+        <code>go get {{ site.domain }}/go/[package-name]</code>
+      </p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "packages": [
+    {
+      "name": "code",
+      "repo": "https://github.com/marianozunino/code",
+      "vcs": "git",
+      "branch": "master"
+    },
+    {
+      "name": "goq",
+      "repo": "https://github.com/marianozunino/goq",
+      "vcs": "git",
+      "branch": "master"
+    },
+    {
+      "name": "rop",
+      "repo": "https://github.com/marianozunino/rop",
+      "vcs": "git",
+      "branch": "master"
+    }
+  ]
+}
