@@ -5,27 +5,53 @@
     mariano zunino
   </a>
   <h1>{{ title }}</h1>
-  {% if deployed %}
-    <a
-      class="port-link"
-      href="{{ deployed }}"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      Deployed
-    </a>
-  {% endif %}
-  {% if source %}
-    <a
-      class="port-link"
-      href="{{ source }}"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      Source
+  <div class="portfolio-links">
+    {% if deployed %}
+      <a
+        class="port-link"
+        href="{{ deployed }}"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Deployed
+      </a>
+    {% endif %}
+    {% if source %}
+      <a
+        class="port-link"
+        href="{{ source }}"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Source
+        <i class="fa-regular fa-file-code"></i>
+      </a>
+    {% endif %}
+  </div>
 
-      <i class="fa-regular fa-file-code"></i>
-    </a>
-  {% endif %}
   {{ content | safe }}
+
+  {% if collections.portfolio %}
+    {% set portfolioItems = collections.portfolio | sort(false, false, 'data.position') %}
+    {% set currentIndex = 0 %}
+
+    {% for project in portfolioItems %}
+      {% if project.url == page.url %}
+        {% set currentIndex = loop.index0 %}
+      {% endif %}
+    {% endfor %}
+    {% set prevProject = portfolioItems[currentIndex - 1] if currentIndex > 0 else portfolioItems[portfolioItems.length - 1] %}
+    {% set nextProject = portfolioItems[currentIndex + 1] if currentIndex < portfolioItems.length - 1 else portfolioItems[0] %}
+
+    <div class="project-navigation">
+      <a href="{{ prevProject.url }}" class="nav-link prev">
+        <i class="fa-solid fa-arrow-left"></i>
+        {{ prevProject.data.title }}
+      </a>
+      <a href="{{ nextProject.url }}" class="nav-link next">
+        {{ nextProject.data.title }}
+        <i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+  {% endif %}
 {% endblock %}
