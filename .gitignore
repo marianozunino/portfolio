@@ -1,22 +1,13 @@
-
 ### Generated output
-_site/
+public/
+resources/
+.hugo_build.lock
 
-node_modules/
-dist
-.env
-.netlify
-yarn-error.log
-yarn.lock
-.cache
-logs
-
-### OSX ###
+### OS and Editor Files
 # General
 .DS_Store
 .AppleDouble
 .LSOverride
-
 # Files that might appear in the root of a volume
 .DocumentRevisions-V100
 .fseventsd

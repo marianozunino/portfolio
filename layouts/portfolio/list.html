@@ -1,0 +1,21 @@
+{{ define "main" }}
+<a class="muted small" href="/">
+  <i class="fa-solid fa-arrow-left"></i>
+  mariano zunino
+</a>
+<h1>{{ .Title }}</h1>
+
+{{ .Content }}
+
+<ul>
+  {{ range .Pages }}
+  <li>
+    {{ if .Params.source }}
+    <i class="fa-regular fa-file-code"></i>
+    {{ end }}
+    <a class="post-link" href="{{ .RelPermalink }}">{{ .Title }}</a>
+    {{ with .Params.summary }} - {{ . }}{{ end }}
+  </li>
+  {{ end }}
+</ul>
+{{ end }}

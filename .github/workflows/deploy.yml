@@ -1,4 +1,4 @@
-name: build 11ty site
+name: Build and Deploy Hugo Site
 on:
   push:
     branches: ["master"]
@@ -18,29 +18,28 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: pnpm/action-setup@v4
+      # Setup Hugo
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
         with:
-          version: 10
+          hugo-version: '0.145.0'
+          extended: true  # Use Hugo Extended for Sass/SCSS processing if needed
 
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: 'pnpm'
-
-      - name: Install dependencies
-        run: pnpm install
-
+      # Build the site
       - name: Build site
-        run: pnpm build
+        run: hugo --minify
 
+      # Setup GitHub Pages
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
+      # Upload artifact
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./_site  # Adjust this to your 11ty output directory
+          path: ./public  # Hugo's default output directory
 
+      # Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

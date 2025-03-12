@@ -1,0 +1,43 @@
+baseURL: "https://mzunino.com.uy/"
+languageCode: "en-us"
+title: "Mariano Zunino"
+enableGitInfo: false
+
+# Custom parameters
+params:
+  description: "Software engineer, professor and gamer. Based in Montevideo, Uruguay."
+  domain: "mzunino.com.uy"
+  author: "Mariano Zunino"
+  image: "/assets/profile.jpg"
+
+# Content organization
+taxonomies:
+  tag: "tags"
+
+# Disable default taxonomies pages
+disableKinds:
+  - "taxonomy"
+  - "term"
+
+# Allow raw HTML in markdown
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+# Ignore certain warning logs
+ignoreLogs:
+  - 'warning-goldmark-raw-html'
+
+# Customize permalinks
+permalinks:
+  portfolio: /:filename/
+
+# Add this to your config.yaml
+menu:
+  main:
+    - identifier: "portfolio"
+      name: "Portfolio"
+      url: "/portfolio/"
+      weight: 3
+

@@ -1,0 +1,36 @@
+{{ define "main" }}
+<header style="display: flex; align-items: center">
+  <img
+    width="60px"
+    height="60px"
+    src="assets/profile.jpg"
+    alt="My profile picture"
+    style="margin-right: 10px; border-radius: 10px"
+  />
+  <div class="header-container">
+    <h1 style="margin: 0">{{ .Title }}</h1>
+    <span id="toggleDarkMode" class="fas fa-moon"></span>
+  </div>
+</header>
+{{ .Content }}
+<hr />
+<h2>Projects</h2>
+<ul>
+  <!-- Get portfolio pages and try to sort them by position -->
+  {{ $pages := where .Site.RegularPages "Section" "portfolio" }}
+
+  <!-- Try position-based sorting first -->
+  {{ $positionPages := sort $pages ".Params.position" }}
+
+  <!-- Display the sorted pages -->
+  {{ range $positionPages }} {{ if not (default false .Params.hidden) }}
+  <li>
+    {{ if .Params.source }}
+    <i class="fa-regular fa-file-code"></i>
+    {{ end }}
+    <a class="post-link" href="{{ .RelPermalink }}">{{ .Title }}</a>
+    {{ with .Params.summary }} - {{ . }}{{ end }}
+  </li>
+  {{ end }} {{ end }}
+</ul>
+{{ end }}

@@ -1,0 +1,66 @@
+{{ define "main" }}
+<a class="muted small" href="/">
+  <i class="fa-solid fa-arrow-left"></i>
+  mariano zunino
+</a>
+<h1>{{ .Title }}</h1>
+<div class="portfolio-links">
+  {{ if .Params.deployed }}
+  <a
+    class="port-link"
+    href="{{ .Params.deployed }}"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Deployed
+  </a>
+  {{ end }} {{ if .Params.source }}
+  <a
+    class="port-link"
+    href="{{ .Params.source }}"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Source
+    <i class="fa-regular fa-file-code"></i>
+  </a>
+  {{ end }}
+</div>
+
+{{ .Content }}
+
+<!-- Get all portfolio pages and sort them by position parameter -->
+{{ $portfolioPages := where .Site.RegularPages "Section" "portfolio" }} {{
+$sortedPages := sort $portfolioPages ".Params.position" }}
+
+<!-- Filter out hidden pages -->
+{{ $visiblePages := slice }} {{ range $sortedPages }} {{ if not (default false
+.Params.hidden) }} {{ $visiblePages = $visiblePages | append . }} {{ end }} {{
+end }} {{ $currentPage := . }} {{ $currentIndex := -1 }}
+
+<!-- Find the current page index -->
+{{ range $index, $page := $visiblePages }} {{ if eq $page.RelPermalink
+$currentPage.RelPermalink }} {{ $currentIndex = $index }} {{ end }} {{ end }}
+
+<!-- Calculate previous and next indices -->
+{{ $prevIndex := sub $currentIndex 1 }} {{ $nextIndex := add $currentIndex 1 }}
+
+<!-- Handle wrapping around the ends -->
+{{ if lt $prevIndex 0 }} {{ $prevIndex = sub (len $visiblePages) 1 }} {{ end }}
+{{ if ge $nextIndex (len $visiblePages) }} {{ $nextIndex = 0 }} {{ end }}
+
+<!-- Get the previous and next pages -->
+{{ $prevProject := index $visiblePages $prevIndex }} {{ $nextProject := index
+$visiblePages $nextIndex }}
+
+<div class="project-navigation">
+  <a href="{{ $prevProject.RelPermalink }}" class="nav-link prev">
+    <i class="fa-solid fa-arrow-left"></i>
+    {{ $prevProject.Title }}
+  </a>
+  <a href="{{ $nextProject.RelPermalink }}" class="nav-link next">
+    {{ $nextProject.Title }}
+    <i class="fa-solid fa-arrow-right"></i>
+  </a>
+</div>
+{{ end }}
