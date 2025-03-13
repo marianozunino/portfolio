@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta content="text/html; charset=UTF-8" name="Content-Type" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -23,27 +22,24 @@
   <meta name="generator" content="Hugo {{ hugo.Version }}" />
 
   {{ if .Description }}
-  <meta name="twitter:description" content="{{ .Description }}" />
-  <meta name="description" content="{{ .Description }}" />
-  <meta property="og:description" content="{{ .Description }}" />
+    <meta name="twitter:description" content="{{ .Description }}" />
+    <meta name="description" content="{{ .Description }}" />
+    <meta property="og:description" content="{{ .Description }}" />
   {{ else }}
-  <meta name="twitter:description"
-    content="Portfolio of Mariano Zunino, software engineer and professor from Uruguay. Specializing in GoLang, TypeScript, and distributed systems with projects in CLI tools, web services, and automation." />
-  <meta name="description"
-    content="Portfolio of Mariano Zunino, software engineer and professor from Uruguay. Specializing in GoLang, TypeScript, and distributed systems with projects in CLI tools, web services, and automation." />
-  <meta property="og:description"
-    content="Portfolio of Mariano Zunino, software engineer and professor from Uruguay. Specializing in GoLang, TypeScript, and distributed systems with projects in CLI tools, web services, and automation." />
+    <meta name="twitter:description" content="Portfolio of Mariano Zunino, software engineer and professor from Uruguay. Specializing in GoLang, TypeScript, and distributed systems with projects in CLI tools, web services, and automation." />
+    <meta name="description" content="Portfolio of Mariano Zunino, software engineer and professor from Uruguay. Specializing in GoLang, TypeScript, and distributed systems with projects in CLI tools, web services, and automation." />
+    <meta property="og:description" content="Portfolio of Mariano Zunino, software engineer and professor from Uruguay. Specializing in GoLang, TypeScript, and distributed systems with projects in CLI tools, web services, and automation." />
   {{ end }}
 
   {{ $image := .Params.image | default .Site.Params.image }}
   {{ if $image }}
-  <meta name="twitter:image" content="https://{{ .Site.Params.domain }}{{ $image }}" />
-  <meta property="og:image" content="https://{{ .Site.Params.domain }}{{ $image }}" />
-  <meta property="og:image:width" content="200" />
-  <meta property="og:image:height" content="200" />
+    <meta name="twitter:image" content="https://{{ .Site.Params.domain }}{{ $image }}" />
+    <meta property="og:image" content="https://{{ .Site.Params.domain }}{{ $image }}" />
+    <meta property="og:image:width" content="200" />
+    <meta property="og:image:height" content="200" />
   {{ else }}
-  <meta name="twitter:image" content="https://{{ .Site.Params.domain }}/assets/android-chrome-192x192.png" />
-  <meta property="og:image" content="https://{{ .Site.Params.domain }}/assets/android-chrome-192x192.png" />
+    <meta name="twitter:image" content="https://{{ .Site.Params.domain }}/assets/android-chrome-192x192.png" />
+    <meta property="og:image" content="https://{{ .Site.Params.domain }}/assets/android-chrome-192x192.png" />
   {{ end }}
 
   <meta name="google-site-verification" content="3kt_YjHglsfi--HId1kgto1G2HgiFgDsvnWmYI05JfU" />
@@ -53,13 +49,13 @@
   <meta property="og:url" content="https://{{ .Site.Params.domain }}{{ .RelPermalink }}" />
   <link rel="canonical" href="https://{{ .Site.Params.domain }}{{ .RelPermalink }}" />
 
-  <link rel="apple-touch-icon" sizes="180x180" href="{{ " /assets/apple-touch-icon.png" | relURL }}" />
-  <link rel="icon" type="image/png" sizes="32x32" href="{{ " /assets/favicon-32x32.png" | relURL }}" />
-  <link rel="icon" type="image/png" sizes="16x16" href="{{ " /assets/favicon-16x16.png" | relURL }}" />
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ "/assets/apple-touch-icon.png" | relURL }}" />
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ "/assets/favicon-32x32.png" | relURL }}" />
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ "/assets/favicon-16x16.png" | relURL }}" />
 
   <title>{{ .Title }} - {{ .Site.Title }}</title>
 
-  <link rel="stylesheet" href="{{ " /css/styles.css" | relURL }}" />
+  <link rel="stylesheet" href="{{ "/css/styles.css" | relURL }}" />
 
   <!-- Early connection hint to Cloudflare CDN -->
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
@@ -69,8 +65,12 @@
 
 
   <!-- Optimized Font Awesome stylesheet with lazy loading -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    media="print" onload="this.media='all'" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    media="print"
+    onload="this.media='all'"
+  />
   <script>
     const isDarkMode = () =>
       localStorage.theme === 'dark' ||
@@ -102,7 +102,6 @@
   }
   </script>
 </head>
-
 <body>
   <main>
     {{ block "main" . }}{{ end }}
@@ -148,7 +147,7 @@
       }
     }
 
-    document.addEventListener('DOMContentLoaded', function () {
+    document.addEventListener('DOMContentLoaded', function() {
       const toggleButton = document.getElementById('toggleDarkMode')
       if (!toggleButton) return;
 
@@ -171,5 +170,4 @@
     });
   </script>
 </body>
-
 </html>
