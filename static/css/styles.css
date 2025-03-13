@@ -392,7 +392,75 @@ blockquote {
   opacity: 1;
 }
 
-/* Adapt for dark mode */
 .dark .back-to-top {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+/* TIL specific styles */
+.navigation-links {
+  display: flex;
+  margin: 1.5rem 0;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.nav-item {
+  color: var(--link);
+  text-decoration: none;
+  font-size: 1.2em;
+  position: relative;
+  transition: color 0.2s ease;
+  padding: 0.25rem 0.5rem;
+}
+
+.nav-item:hover {
+  color: var(--darkgray);
+}
+
+.nav-item::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: var(--link);
+  transition: width 0.3s ease;
+}
+
+.nav-item:hover::after {
+  width: 100%;
+}
+
+.dark .nav-item:hover {
+  color: var(--lightgray);
+}
+
+.metadata {
+  margin-bottom: 1.5rem;
+  font-size: 0.9em;
+  color: var(--lightgray);
+}
+
+.date {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+.tags {
+  display: inline-block;
+}
+
+.tag {
+  display: inline-block;
+  background-color: var(--lightgray);
+  color: var(--background);
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+  margin-right: 0.5rem;
+  font-size: 0.8em;
+}
+
+.dark .tag {
+  background-color: var(--link);
 }

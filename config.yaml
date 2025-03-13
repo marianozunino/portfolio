@@ -39,3 +39,7 @@ menu:
       name: "Portfolio"
       url: "/portfolio/"
       weight: 3
+    - identifier: "til"
+      name: "Today I Learned"
+      url: "/til/"
+      weight: 4
