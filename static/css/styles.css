@@ -464,3 +464,19 @@ blockquote {
 .dark .tag {
   background-color: var(--link);
 }
+
+
+.zoomable-image img {
+  cursor: zoom-in;
+  transition: transform 0.3s ease;
+}
+
+.zoomable-image img:hover {
+  transform: scale(1.02);
+}
+
+.zoomable-image figcaption {
+  text-align: center;
+  font-style: italic;
+  margin-top: 0.5em;
+}
