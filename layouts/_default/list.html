@@ -1,19 +1,27 @@
 {{ define "main" }}
-<a class="muted small" href="/">
-  <i class="fa-solid fa-arrow-left"></i>
-  mariano zunino
-</a>
-<h1>{{ .Title }}</h1>
+  <h1>{{ .Title }}</h1>
 
-{{ .Content }}
+  {{ .Content }}
 
-<ul>
-  {{ range .Pages.ByDate.Reverse }}
-  <li>
-    <span class="small">{{ .Date.Format "2006-01-02" }}</span>
-    <a class="post-link" href="{{ .RelPermalink }}">{{ .Title }}</a>
-    {{ with .Params.summary }} - {{ . }}{{ end }}
-  </li>
-  {{ end }}
-</ul>
+  <ul>
+    <!-- Get portfolio pages and try to sort them by position -->
+    {{ $pages := where .Site.RegularPages "Section" "portfolio" }}
+
+    <!-- Try position-based sorting first -->
+    {{ $positionPages := sort $pages ".Params.position" }}
+
+    <!-- Display the sorted pages -->
+    {{ range $positionPages }} 
+      {{ if not (default false .Params.hidden) }}
+        <li>
+          {{ if .Params.source }}
+            <i class="fa-regular fa-file-code"></i>
+          {{ end }}
+
+          <a class="post-link" href="{{ .RelPermalink }}">{{ .Title }}</a>
+          {{ with .Params.summary }} - {{ . }}{{ end }}
+        </li>
+      {{ end }} 
+    {{ end }}
+  </ul>
 {{ end }}

@@ -1,5 +1,6 @@
-{{ $src := .Get "src" }} {{ $alt := .Get "alt" | default "Image" }} {{ $caption
-:= .Get "caption" | default "" }}
+{{ $src := .Get "src" }}
+{{ $alt := .Get "alt" | default "Image" }}
+{{ $caption := .Get "caption" | default "" }}
 
 <figure class="zoomable-image">
   <a href="{{ $src }}" target="_blank">

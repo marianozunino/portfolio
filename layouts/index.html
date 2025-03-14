@@ -1,18 +1,20 @@
 {{ define "main" }}
-<header style="display: flex; align-items: center">
-  <img width="60px" height="60px" src="assets/profile.jpg" alt="My profile picture"
-    style="margin-right: 10px; border-radius: 10px" />
-  <div class="header-container">
-    <h1 style="margin: 0">{{ .Title }}</h1>
-    <span id="toggleDarkMode" class="fas fa-moon"></span>
+  <div class="home-container">
+    <div class="home-hero">
+      <div class="home-intro">
+        <h1>Software engineer, professor and gamer</h1>
+        <p class="subtitle">Based in Montevideo, Uruguay</p>
+
+        <div class="home-description">
+          <p>My portfolio is just a collection of things I tinker with to keep learning. Some of them are honestly just
+            crap I threw together, while others actually turned out useful. Either way, they keep me sharp and let me play
+            with new tech without the constraints of work projects.</p>
+        </div>
+      </div>
+
+      <div class="home-image">
+        <img src="/images/profile.jpg" alt="Mariano Zunino" class="profile-img" />
+      </div>
+    </div>
   </div>
-</header>
-{{ .Content }}
-<hr />
-<div class="navigation-links">
-  <a href="/about/" class="nav-item">About</a>
-  <a href="/portfolio/" class="nav-item">Portfolio</a>
-  <a href="/til/" class="nav-item">Today I Learned</a>
-  <a href="/tags/" class="nav-item">Tags</a>
-</div>
 {{ end }}

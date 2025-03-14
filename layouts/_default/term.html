@@ -1,23 +1,19 @@
 {{ define "main" }}
-<div style="display: flex; gap: 1rem;">
-  <a class="muted small" href="/tags/">
-    <i class="fa-solid fa-arrow-left"></i>
-    back to all tags
-  </a>
-  <a class="muted small" href="/">
-    <i class="fa-solid fa-home"></i>
-    home
-  </a>
-</div>
-<h1>Tagged: {{ .Title }}</h1>
+  <div>
+    <a class="return-link" href="/tags/">
+      <i class="fa-solid fa-arrow-left"></i>
+      back to all tags
+    </a>
+  </div>
+  <h1>Tagged: {{ .Title }}</h1>
 
-<ul>
-  {{ range .Pages }}
-  <li>
-    <span class="small">{{ .Date.Format "2006-01-02" }}</span>
-    <a class="post-link" href="{{ .RelPermalink }}">{{ .Title }}</a>
-    {{ with .Params.summary }} - {{ . }}{{ end }}
-  </li>
-  {{ end }}
-</ul>
+  <ul>
+    {{ range .Pages }}
+    <li>
+      <span class="small">{{ .Date.Format "2006-01-02" }}</span>
+      <a class="post-link" href="{{ .RelPermalink }}">{{ .Title }}</a>
+      {{ with .Params.summary }} - {{ . }} {{ end }}
+    </li>
+    {{ end }}
+  </ul>
 {{ end }}

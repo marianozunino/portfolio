@@ -7,7 +7,7 @@ params:
   description: "Software engineer and professor from Uruguay specializing in GoLang, TypeScript, and distributed systems. Creator of tools like Run on Pod, GoQ for RabbitMQ, and various other projects."
   domain: "mzunino.com.uy"
   author: "Mariano Zunino"
-  image: "/assets/profile.jpg"
+  image: "/images/profile.jpg"
 
 # Content organization
 taxonomies:

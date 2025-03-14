@@ -1,17 +1,13 @@
 {{ define "main" }}
-<a class="muted small" href="/">
-  <i class="fa-solid fa-arrow-left"></i>
-  mariano zunino
-</a>
-<h1>{{ .Title }}</h1>
+  <h1>{{ .Title }}</h1>
 
-<p>Browse articles by tag:</p>
+  <p>Browse articles by tag:</p>
 
-<div class="tags-list">
-  {{ range .Data.Terms.Alphabetical }}
-  <a href="{{ .Page.RelPermalink }}" class="tag">
-    {{ .Page.Title }} ({{ .Count }})
-  </a>
-  {{ end }}
-</div>
+  <div class="tags-list">
+    {{ range .Data.Terms.Alphabetical }}
+    <a href="{{ .Page.RelPermalink }}" class="tag">
+      {{ .Page.Title }} ({{ .Count }})
+    </a>
+    {{ end }}
+  </div>
 {{ end }}
