@@ -1,12 +1,7 @@
 {{ define "main" }}
 <header style="display: flex; align-items: center">
-  <img
-    width="60px"
-    height="60px"
-    src="assets/profile.jpg"
-    alt="My profile picture"
-    style="margin-right: 10px; border-radius: 10px"
-  />
+  <img width="60px" height="60px" src="assets/profile.jpg" alt="My profile picture"
+    style="margin-right: 10px; border-radius: 10px" />
   <div class="header-container">
     <h1 style="margin: 0">{{ .Title }}</h1>
     <span id="toggleDarkMode" class="fas fa-moon"></span>
@@ -18,5 +13,6 @@
   <a href="/about/" class="nav-item">About</a>
   <a href="/portfolio/" class="nav-item">Portfolio</a>
   <a href="/til/" class="nav-item">Today I Learned</a>
+  <a href="/tags/" class="nav-item">Tags</a>
 </div>
 {{ end }}

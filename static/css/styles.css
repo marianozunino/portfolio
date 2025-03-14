@@ -480,3 +480,60 @@ blockquote {
   font-style: italic;
   margin-top: 0.5em;
 }
+
+
+.tags-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.5rem 0;
+}
+
+.tags-list .tag {
+  display: inline-block;
+  background-color: var(--lightgray);
+  color: var(--background);
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+  font-size: 0.9em;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.tags-list .tag:hover {
+  background-color: var(--link);
+}
+
+.dark .tags-list .tag {
+  background-color: var(--link);
+}
+
+.dark .tags-list .tag:hover {
+  background-color: var(--lightgray);
+  color: var(--background);
+}
+
+/* Make tags in metadata clickable */
+.metadata .tag {
+  display: inline-block;
+  background-color: var(--lightgray);
+  color: var(--background);
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+  margin-right: 0.5rem;
+  font-size: 0.8em;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.metadata .tag:hover {
+  background-color: var(--link);
+}
+
+.dark .metadata .tag {
+  background-color: var(--link);
+}
+
+.dark .metadata .tag:hover {
+  background-color: var(--lightgray);
+}

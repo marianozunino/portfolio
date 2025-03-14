@@ -13,11 +13,6 @@ params:
 taxonomies:
   tag: "tags"
 
-# Disable default taxonomies pages
-disableKinds:
-  - "taxonomy"
-  - "term"
-
 # Allow raw HTML in markdown
 markup:
   goldmark:
@@ -44,3 +39,7 @@ menu:
       name: "Today I Learned"
       url: "/til/"
       weight: 4
+    - identifier: "tags"
+      name: "Tags"
+      url: "/tags/"
+      weight: 5
