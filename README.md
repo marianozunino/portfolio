@@ -44,7 +44,7 @@ The built site will be in the `public` directory.
   - `about.md` - About page
   - `portfolio/` - Individual project pages
 - `layouts/` - HTML templates
-- `static/` - Static assets (images, CSS, etc.)
+- `assets/` - Static assets (images, CSS, etc.)
 - `config.yaml` - Site configuration
 
 ## Deployment

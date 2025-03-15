@@ -18,6 +18,18 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # Setup Node.js for PostCSS/PurgeCSS
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      # Install PostCSS dependencies
+      - name: Install PostCSS dependencies
+        run: |
+          npm install postcss autoprefixer @fullhuman/postcss-purgecss
+
       # Setup Hugo
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
@@ -27,7 +39,11 @@ jobs:
 
       # Build the site
       - name: Build site
-        run: hugo --minify
+        run: |
+          # Enable stats to generate hugo_stats.json for PurgeCSS
+          hugo --minify --gc --enableGitInfo
+        env:
+          HUGO_ENVIRONMENT: production
 
       # Setup GitHub Pages
       - name: Setup Pages

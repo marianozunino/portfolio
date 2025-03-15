@@ -15,7 +15,7 @@ Building side projects is another passion of mine, both for enjoyment and profit
 
 In addition to my software work, I have a strong interest in teaching and sharing knowledge. As a professor at FING, I strive to contribute to the community by training and educating others.
 
-Did I also mention that I have two lovely dogs 🐶❤️? They are named <a href="/assets/rocco.jpg">Rocco</a> and <a href="/assets/mora.jpg">Mora</a>! And here's a photo of them together <a href="/assets/babies.jpg">Dogs</a>.
+Did I also mention that I have two lovely dogs 🐶❤️? They are named <a href="/images/rocco.jpg">Rocco</a> and <a href="/images/mora.jpg">Mora</a>! And here's a photo of them together <a href="/images/babies.jpg">Dogs</a>.
 
 ## Contact
 - [CV](/assets/cv.pdf)

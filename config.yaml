@@ -43,3 +43,7 @@ menu:
       name: "Tags"
       url: "/tags/"
       weight: 5
+
+build:
+  buildStats:
+    enable: true

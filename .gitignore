@@ -25,3 +25,4 @@ resources/
 !.vscode/extensions.json
 *.code-workspace
 .vscode-test
+node_modules/

@@ -622,3 +622,91 @@ pre {
     list-style-position: inside;
   }
 }
+
+/* Enhanced Portfolio List */
+.portfolio-list {
+  margin: 2rem 0;
+}
+
+.portfolio-item {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--lightgray);
+  opacity: 0.85;
+  transition: opacity 0.2s ease;
+}
+
+.portfolio-item:hover {
+  opacity: 1;
+}
+
+.portfolio-item:first-child {
+  border-top: 1px solid var(--lightgray);
+}
+
+.item-title {
+  margin: 0 0 0.5rem;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+}
+
+.item-title a {
+  color: var(--link);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.item-title a:hover {
+  text-decoration: underline;
+}
+
+.item-title a::after {
+  content: '→';
+  opacity: 0;
+  margin-left: 0.3rem;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  display: inline-block;
+}
+
+.item-title a:hover::after {
+  opacity: 1;
+  transform: translateX(3px);
+}
+
+
+
+.item-summary {
+  margin: 0.5rem 0 0.75rem;
+  font-size: 1rem;
+}
+
+.item-meta {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.source-link {
+  color: var(--link);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+.source-link i {
+  margin-right: 0.25rem;
+}
+
+.source-link:hover {
+  text-decoration: underline;
+}
+
+/* Dark mode adjustments */
+.dark .portfolio-item {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark .portfolio-item:first-child {
+  border-color: rgba(255, 255, 255, 0.1);
+}

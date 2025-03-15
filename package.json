@@ -1,0 +1,26 @@
+{
+  "name": "hugo-purgecss-example",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Using PostCSS and PurgeCSS with Hugo Test",
+  "homepage": "https://purgecss-test.christianoliff.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/coliff/purgecss-test"
+  },
+  "author": "C.Oliff (https://christianoliff.com)",
+  "scripts": {
+    "build": "npx hugo",
+    "serve": "npx hugo serve --port 4000 --disableFastRender --ignoreCache --navigateToChanged"
+  },
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "7.0.2",
+    "autoprefixer": "10.4.21",
+    "postcss": "8.5.3",
+    "postcss-cli": "11.0.1"
+  },
+  "hugo-bin": {
+    "buildTags": "extended"
+  },
+  "packageManager": "npm@11.1.0+sha1.dba08f7d0f5301ebedaf968b4f74b2282f97a750"
+}
