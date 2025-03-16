@@ -111,7 +111,6 @@ blockquote {
   position: sticky;
   top: 0;
   z-index: 100;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   margin-bottom: 2rem;
   padding: 0.5rem 0;
   border-bottom: 1px solid var(--lightgray);
@@ -709,4 +708,23 @@ pre {
 
 .dark .portfolio-item:first-child {
   border-color: rgba(255, 255, 255, 0.1);
+}
+
+.zoomable-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 1.5rem 0;
+}
+
+.zoomable-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.zoomable-image figcaption {
+  text-align: center;
+  margin-top: 0.5rem;
+  font-style: italic;
 }
