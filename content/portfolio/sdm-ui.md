@@ -4,6 +4,7 @@ summary: An ugly sdm (strong DM) wrapper to get a better DX under linux
 source: https://github.com/marianozunino/sdm-ui
 description: 'Project: An ugly sdm (strong DM) wrapper to get a better DX under linux'
 position: 1
+language: 'GoLang'
 ---
 #### Overview
 

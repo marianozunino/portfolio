@@ -5,6 +5,7 @@ source: https://github.com/marianozunino/portfolio
 url: /portfolio-hugo/
 description: 'Project: My personal portfolio website built with Hugo static site generator'
 position: 98
+language: Markdown
 ---
 #### Overview
 

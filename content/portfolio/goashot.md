@@ -4,6 +4,7 @@ summary: "Go Ashot: Managing Custom Food Orders with GoLang"
 description: 'Project: Go Ashot is a GoLang project that allows users to place food orders on Rappi.com.uy'
 source: https://github.com/marianozunino/goashot
 position: 3
+language: 'GoLang'
 ---
 #### Overview
 

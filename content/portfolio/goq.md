@@ -4,6 +4,7 @@ summary: A simple CLI tool for consuming RabbitMQ messages and saving them to fi
 source: https://github.com/marianozunino/goq
 description: 'Project: A lightweight CLI for RabbitMQ message consumption.'
 position: 0
+language: 'GoLang'
 ---
 
 #### Overview

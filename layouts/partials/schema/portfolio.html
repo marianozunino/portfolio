@@ -1,0 +1,17 @@
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareSourceCode",
+    "name": "{{ .Title }}",
+    "description": "{{ .Params.summary }}",
+    "codeRepository": "{{ .Params.source }}",
+    "programmingLanguage": {
+      "@type": "ComputerLanguage",
+      "name": "{{ .Params.language | default "Other" }}"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Mariano Zunino"
+    }
+  }
+</script>

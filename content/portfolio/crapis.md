@@ -4,6 +4,7 @@ summary: 'RESP implementation in Go with basic Redis commands.'
 source: https://github.com/marianozunino/crapis
 description: 'An implementation of the Redis Serialization Protocol (RESP) in Go, featuring both reading and writing capabilities, along with basic Redis command functionality.'
 position: 1
+language: 'GoLang'
 ---
 
 ## Crapis

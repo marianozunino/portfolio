@@ -3,6 +3,7 @@ title: 'Sige'
 summary: "Conference management system with tools for registration, payments, and event organization"
 description: 'Sige is a collaborative project for managing conferences in Latin America, developed with Mathias Zunino. It simplifies registrations, payments, and schedule management.'
 position: 1
+language: 'Typescript'
 ---
 
 #### Overview

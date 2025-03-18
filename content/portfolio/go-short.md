@@ -4,6 +4,7 @@ summary: "Go Short: URL Shortener"
 description: 'Project: URL Shortener with GoLang'
 source: https://github.com/marianozunino/go-short
 position: 4
+language: 'GoLang'
 ---
 #### Overview
 

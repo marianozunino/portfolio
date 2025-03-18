@@ -4,6 +4,7 @@ summary: A CLI tool for executing scripts and binaries across multiple Kubernete
 source: https://github.com/marianozunino/rop
 description: 'Project: A CLI tool for seamless script execution across numerous Kubernetes environments'
 position: 0
+language: 'GoLang'
 ---
 
 #### Overview

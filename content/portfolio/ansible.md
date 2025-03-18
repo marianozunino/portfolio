@@ -4,6 +4,7 @@ summary: "My ansible linux config"
 description: 'My ansible linux config'
 source: https://github.com/marianozunino/ansible
 position: 99
+language: 'Ansible'
 ---
 #### Overview
 

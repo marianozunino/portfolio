@@ -3,6 +3,7 @@ title: 'Geo Punch'
 summary: "Geo Punch is a GoLang+Flutter project that allows users to clock in and out for work"
 description: 'Geo Punch is a GoLang+Flutter project that allows users to clock in and out for work'
 position: 2
+language: 'GoLang'
 ---
 
 #### Overview

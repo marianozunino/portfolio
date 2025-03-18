@@ -91,6 +91,8 @@
     }
   </script>
 
+
+  {{ if .IsHome }}
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -109,7 +111,16 @@
     }
   }
   </script>
+  {{ end }}
+
+  <!-- Type-specific schemas -->
+  {{ if eq .Type "til" }}
+    {{ partial "schema/til.html" . }}
+  {{ else if eq .Type "portfolio" }}
+    {{ partial "schema/portfolio.html" . }}
+  {{ end }}
 </head>
+
 
 <body>
   {{ partial "nav.html" . }}
@@ -180,5 +191,7 @@
     });
   </script>
 </body>
+
+
 
 </html>

@@ -4,6 +4,7 @@ summary: "Temporary file hosting service built with Go's Echo framework"
 description: 'Project: Drop is a lightweight, self-hosted file sharing service inspired by 0x0.st that provides temporary file hosting with dynamic expiration'
 source: https://github.com/marianozunino/drop
 position: -1
+language: 'GoLang'
 ---
 
 #### Overview
