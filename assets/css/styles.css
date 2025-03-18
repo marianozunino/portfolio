@@ -1,22 +1,12 @@
-/* Base variables */
+/* Base variables - using dark theme values by default */
 :root {
-  --background: #fdf6e3;
-  --main-text: #121212;
-  --lightgray: #002b36;
-  --darkgray: #111;
-  --mediumgray: #aaa;
-  --black: #000;
-  --link: #004994;
-  --green: #99ffdd;
-}
-
-/* Dark theme variables */
-.dark {
   --background: rgba(24, 24, 24, 1);
   --main-text: #e4e4e4;
-  --darkgray: #e4e4e4;
   --lightgray: #657b83;
+  --darkgray: #e4e4e4;
+  --black: #000;
   --link: #73ABDE;
+  --green: #99ffdd;
 }
 
 /* Base styles */
@@ -111,7 +101,7 @@ blockquote {
   position: sticky;
   top: 0;
   z-index: 100;
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
   padding: 0.5rem 0;
   border-bottom: 1px solid var(--lightgray);
 }
@@ -193,23 +183,6 @@ blockquote {
   left: 10%;
 }
 
-.theme-toggle {
-  margin-left: 0.5rem;
-  display: flex;
-  align-items: center;
-}
-
-#toggleDarkMode {
-  cursor: pointer;
-  transition: opacity 0.2s ease-in-out;
-  font-size: 1rem;
-  color: var(--main-text);
-}
-
-#toggleDarkMode:hover {
-  opacity: 0.7;
-}
-
 /* Mobile navigation */
 .nav-toggle {
   display: none;
@@ -286,7 +259,7 @@ blockquote {
   transition: opacity 0.3s ease, transform 0.3s ease;
   transform: translateY(20px);
   z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
 }
 
 .back-to-top.visible {
@@ -296,10 +269,6 @@ blockquote {
 
 .back-to-top:hover {
   opacity: 1;
-}
-
-.dark .back-to-top {
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
 }
 
 /* TIL specific styles */
@@ -320,7 +289,7 @@ blockquote {
 
 .tag {
   display: inline-block;
-  background-color: var(--lightgray);
+  background-color: var(--link);
   color: var(--background);
   padding: 0.2rem 0.5rem;
   border-radius: 3px;
@@ -331,14 +300,6 @@ blockquote {
 }
 
 .tag:hover {
-  background-color: var(--link);
-}
-
-.dark .tag {
-  background-color: var(--link);
-}
-
-.dark .tag:hover {
   background-color: var(--lightgray);
   color: var(--background);
 }
@@ -454,13 +415,9 @@ pre {
 
 :not(pre) > code {
   padding: 0.1em 0.3em;
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: rgba(255, 255, 255, 0.1);
   border-radius: 3px;
   font-size: 0.9em;
-}
-
-.dark :not(pre) > code {
-  background-color: rgba(255, 255, 255, 0.1);
 }
 
 /* Token styling for syntax highlighting */
@@ -673,8 +630,6 @@ pre {
   transform: translateX(3px);
 }
 
-
-
 .item-summary {
   margin: 0.5rem 0 0.75rem;
   font-size: 1rem;
@@ -701,15 +656,6 @@ pre {
   text-decoration: underline;
 }
 
-/* Dark mode adjustments */
-.dark .portfolio-item {
-  border-color: rgba(255, 255, 255, 0.1);
-}
-
-.dark .portfolio-item:first-child {
-  border-color: rgba(255, 255, 255, 0.1);
-}
-
 .zoomable-image {
   display: flex;
   flex-direction: column;
@@ -727,4 +673,238 @@ pre {
   text-align: center;
   margin-top: 0.5rem;
   font-style: italic;
+}
+
+/* Home container styles */
+.home-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.intro-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 1.0rem;
+  gap: 2rem;
+}
+
+.intro-content {
+  flex: 1;
+}
+
+.intro-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+  position: relative;
+  display: inline-block;
+}
+
+.list-content h1:after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: var(--link);
+}
+
+.list-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+.intro-content h1:after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: var(--link);
+}
+
+.intro-image {
+  flex-shrink: 0;
+}
+
+.profile-img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #333;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+
+.about-section,
+.contact-section {
+  margin: 0rem 0;
+}
+
+.contact-section h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.contact-section h2:after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: var(--link);
+}
+
+.about-section p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.portfolio-summary {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: #2d3748;
+  border-radius: 8px;
+  border-left: 4px solid #a78bfa;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: #8b5cf6;
+  color: white;
+  border-radius: 6px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.cta-button:hover {
+  background: #7c3aed;
+  transform: translateY(-2px);
+}
+
+.cta-button.secondary {
+  background: transparent;
+  border: 2px solid #a78bfa;
+  color: #a78bfa;
+}
+
+.cta-button.secondary:hover {
+  background: rgba(167, 139, 250, 0.1);
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.contact-list li a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: #60a5fa;
+  transition: color 0.2s ease;
+}
+
+.contact-list li a:hover {
+  color: #93c5fd;
+  text-decoration: underline;
+}
+
+.contact-list li i {
+  width: 20px;
+  text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .intro-container {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .intro-content h1 {
+    font-size: 2rem;
+  }
+
+  .intro-content h1:after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .profile-img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .contact-list {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .contact-section h2:after {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+  }
+
+  .contact-section h2 {
+    display: block;
+    text-align: center;
+  }
+}
+
+/* Bio with image styles */
+.bio-with-image {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+.intro-image {
+  float: right;
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+  shape-outside: circle(50% at 50% 50%);
+  shape-margin: 1rem;
+}
+
+/* For smaller screens, reset the float */
+@media (max-width: 600px) {
+  .intro-image {
+    float: none;
+    margin: 0 auto 1.5rem;
+    display: block;
+    text-align: center;
+  }
+
+  .profile-img {
+    margin: 0 auto;
+  }
 }

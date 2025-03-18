@@ -1,23 +1,106 @@
 {{ define "main" }}
   <div class="home-container">
-    <div class="home-hero">
-      <div class="home-intro">
-        <h1>Software engineer, professor and gamer</h1>
-        <p class="subtitle">Based in Montevideo, Uruguay</p>
+    <div class="about-section">
+      <div class="intro-container">
+        <div class="intro-content">
+          <h1>Hello!</h1>
+        </div>
+      </div>
 
-        <div class="home-description">
+      <div class="main-bio">
+        <div class="bio-with-image">
+          <div class="intro-image">
+            <img
+              src="/images/profile.jpg"
+              alt="Mariano Zunino"
+              class="profile-img"
+            />
+          </div>
+
           <p>
-            My portfolio is just a collection of things I tinker with to keep
-            learning. Some of them are honestly just crap I threw together, while
-            others actually turned out useful. Either way, they keep me sharp and
-            let me play with new tech without the constraints of work projects.
+            I'm Mariano, a software engineer from Montevideo, Uruguay. I pursued
+            my Technologist Degree in Computer Science at
+            <a href="https://www.fing.edu.uy/" target="_blank">Fing</a> after
+            several years working as an IT Technician (which comes handy when
+            dealing with infrastructure).
+          </p>
+
+          <p>
+            I enjoy expanding my knowledge and although I wouldn't call myself a
+            bookworm, I love reading compelling books, especially those on
+            computer science.
+          </p>
+
+          <p>
+            Building side projects is another passion of mine, both for enjoyment
+            and profit. For the latter, I often collaborate with my brother
+            <a href="https://totozunino.github.io/portfolio/" target="_blank"
+              >Mathias</a
+            >.
+          </p>
+
+          <p>
+            In addition to my software work, I have a strong interest in teaching
+            and sharing knowledge. As a professor at FING, I strive to contribute
+            to the community by training and educating others.
+          </p>
+
+          <p>
+            Did I also mention that I have two lovely dogs 🐶❤️? They are named
+            <a href="/images/rocco.jpg">Rocco</a> and
+            <a href="/images/mora.jpg">Mora</a>! And here's a photo of them
+            together <a href="/images/babies.jpg">Dogs</a>.
           </p>
         </div>
       </div>
 
-      <div class="home-image">
-        <img src="/images/profile.jpg" alt="Mariano Zunino" class="profile-img" />
+      <!-- Contact Section -->
+      <div class="contact-section">
+        <h2>Contact</h2>
+        <ul class="contact-list">
+          <li>
+            <a href="/assets/cv.pdf" target="_blank"
+              ><i class="fa-solid fa-file-pdf"></i> Download CV</a
+            >
+          </li>
+          <li><span id="email"></span></li>
+          <li>
+            <a href="https://github.com/marianozunino" target="_blank"
+              ><i class="fa-brands fa-github"></i> Github</a
+            >
+          </li>
+          <li>
+            <a href="https://linkedin.com/in/mariano-z" target="_blank"
+              ><i class="fa-brands fa-linkedin"></i> LinkedIn</a
+            >
+          </li>
+        </ul>
       </div>
     </div>
+
+    <script type="text/javascript">
+      document.addEventListener("DOMContentLoaded", function () {
+        var user = "marianoz";
+        var domain = "posteo";
+        var tld = "net";
+
+        var email = user + "@" + domain + "." + tld;
+
+        var emailLink = document.createElement("a");
+        emailLink.href = `mailto:${email}?subject=Hello!&body=Hi%20Mariano!`;
+
+        var icon = document.createElement("i");
+        icon.className = "fa-solid fa-envelope";
+        emailLink.appendChild(icon);
+
+        emailLink.appendChild(document.createTextNode(" "));
+
+        emailLink.appendChild(
+          document.createTextNode(user + " [at] " + domain + " [dot] " + tld),
+        );
+
+        document.getElementById("email").appendChild(emailLink);
+      });
+    </script>
   </div>
 {{ end }}

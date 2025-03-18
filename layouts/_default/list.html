@@ -1,5 +1,7 @@
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
+  <div class="list-content">
+    <h1>{{ .Title }}</h1>
+  </div>
 
   {{ .Content }}
 
@@ -11,17 +13,15 @@
     {{ $positionPages := sort $pages ".Params.position" }}
 
     <!-- Display the sorted pages -->
-    {{ range $positionPages }} 
-      {{ if not (default false .Params.hidden) }}
-        <li>
-          {{ if .Params.source }}
-            <i class="fa-regular fa-file-code"></i>
-          {{ end }}
+    {{ range $positionPages }} {{ if not (default false .Params.hidden) }}
+    <li>
+      {{ if .Params.source }}
+      <i class="fa-regular fa-file-code"></i>
+      {{ end }}
 
-          <a class="post-link" href="{{ .RelPermalink }}">{{ .Title }}</a>
-          {{ with .Params.summary }} - {{ . }}{{ end }}
-        </li>
-      {{ end }} 
-    {{ end }}
+      <a class="post-link" href="{{ .RelPermalink }}">{{ .Title }}</a>
+      {{ with .Params.summary }} - {{ . }}{{ end }}
+    </li>
+    {{ end }} {{ end }}
   </ul>
 {{ end }}

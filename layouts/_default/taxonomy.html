@@ -1,7 +1,9 @@
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
+  <div class="list-content">
+    <h1>{{ .Title }}</h1>
+  </div>
 
-  <p>Browse articles by tag:</p>
+  <p>Browse TIL by tag:</p>
 
   <div class="tags-list">
     {{ range .Data.Terms.Alphabetical }}

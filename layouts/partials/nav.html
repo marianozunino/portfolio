@@ -3,7 +3,6 @@
   <div class="nav-container">
     <div class="nav-left">
       <a href="/" class="site-logo">
-        <img width="36" height="36" src="/images/profile.jpg" alt="Mariano Zunino" />
         {{ partial "prompt.html" . }}
       </a>
     </div>
@@ -14,13 +13,9 @@
       </label>
       <ul class="nav-links">
         <li><a href="/" class="nav-item {{ if .IsHome }}active{{ end }}">Home</a></li>
-        <li><a href="/about/" class="nav-item {{ if eq .RelPermalink " /about/" }}active{{ end }}">About</a></li>
         <li><a href="/portfolio/" class="nav-item {{ if eq .Section " portfolio" }}active{{ end }}">Portfolio</a></li>
         <li><a href="/til/" class="nav-item {{ if eq .Section " til" }}active{{ end }}">TIL</a></li>
         <li><a href="/tags/" class="nav-item {{ if eq .RelPermalink " /tags/" }}active{{ end }}">Tags</a></li>
-        <li class="theme-toggle">
-          <span id="toggleDarkMode" class="fas fa-moon" aria-label="Toggle dark mode"></span>
-        </li>
       </ul>
     </div>
   </div>
