@@ -1,197 +1,232 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta content="text/html; charset=UTF-8" name="Content-Type" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width" />
 
-<head>
-  <meta content="text/html; charset=UTF-8" name="Content-Type" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width" />
+    <!-- Facebook Meta Tags -->
+    <meta
+      property="og:url"
+      content="https://{{ .Site.Params.domain }}{{ .RelPermalink }}" />
+    <meta property="og:title" content="{{ .Title }}" />
 
-  <!-- Facebook Meta Tags -->
-  <meta property="og:url" content="https://{{ .Site.Params.domain }}{{ .RelPermalink }}" />
-  <meta property="og:title" content="{{ .Title }}" />
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary" />
+    <meta property="twitter:domain" content="{{ .Site.Params.domain }}" />
+    <meta
+      property="twitter:url"
+      content="https://{{ .Site.Params.domain }}{{ .RelPermalink }}" />
+    <meta name="twitter:title" content="{{ .Title }}" />
 
-  <!-- Twitter Meta Tags -->
-  <meta name="twitter:card" content="summary" />
-  <meta property="twitter:domain" content="{{ .Site.Params.domain }}" />
-  <meta property="twitter:url" content="https://{{ .Site.Params.domain }}{{ .RelPermalink }}" />
-  <meta name="twitter:title" content="{{ .Title }}" />
+    <meta property="og:site_name" content="{{ .Title }}" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="article" />
+    <meta property="og:author" content="{{ .Site.Params.author }}" />
+    <meta name="generator" content="Hugo {{ hugo.Version }}" />
 
-  <meta property="og:site_name" content="{{ .Title }}" />
-  <meta property="og:locale" content="en_US" />
-  <meta property="og:type" content="article" />
-  <meta property="og:author" content="{{ .Site.Params.author }}" />
-  <meta name="generator" content="Hugo {{ hugo.Version }}" />
-
-  {{ if .Description }}
-  <meta name="twitter:description" content="{{ .Description }}" />
-  <meta name="description" content="{{ .Description }}" />
-  <meta property="og:description" content="{{ .Description }}" />
-  {{ else }}
-  <meta name="twitter:description"
-    content="Portfolio of Mariano Zunino, software engineer and professor from Uruguay. Specializing in GoLang, TypeScript, and distributed systems with projects in CLI tools, web services, and automation." />
-  <meta name="description"
-    content="Portfolio of Mariano Zunino, software engineer and professor from Uruguay. Specializing in GoLang, TypeScript, and distributed systems with projects in CLI tools, web services, and automation." />
-  <meta property="og:description"
-    content="Portfolio of Mariano Zunino, software engineer and professor from Uruguay. Specializing in GoLang, TypeScript, and distributed systems with projects in CLI tools, web services, and automation." />
-  {{ end }}
-
-  {{ $image := .Params.image | default .Site.Params.image }}
-  {{ if $image }}
-  <meta name="twitter:image" content="https://{{ .Site.Params.domain }}{{ $image }}" />
-  <meta property="og:image" content="https://{{ .Site.Params.domain }}{{ $image }}" />
-  <meta property="og:image:width" content="200" />
-  <meta property="og:image:height" content="200" />
-  {{ else }}
-  <meta name="twitter:image" content="https://{{ .Site.Params.domain }}/android-chrome-192x192.png" />
-  <meta property="og:image" content="https://{{ .Site.Params.domain }}/android-chrome-192x192.png" />
-  {{ end }}
-
-  <meta name="google-site-verification" content="3kt_YjHglsfi--HId1kgto1G2HgiFgDsvnWmYI05JfU" />
-
-  <meta name="author" content="{{ .Site.Params.author }}" />
-
-  <meta property="og:url" content="https://{{ .Site.Params.domain }}{{ .RelPermalink }}" />
-  <link rel="canonical" href="https://{{ .Site.Params.domain }}{{ .RelPermalink }}" />
-
-  <link rel="apple-touch-icon" sizes="180x180" href="{{ "apple-touch-icon.png" | relURL }}" />
-  <link rel="icon" type="image/png" sizes="32x32" href="{{ "favicon-32x32.png" | relURL }}" />
-  <link rel="icon" type="image/png" sizes="16x16" href="{{ "favicon-16x16.png" | relURL }}" />
-
-  <title>{{ .Title }} - {{ .Site.Title }}</title>
-
-  {{ with resources.Get "/css/styles.css" }}
-    {{ if hugo.IsDevelopment }}
-      <link rel="stylesheet" href="{{ .RelPermalink }}">
+    {{ if .Description }}
+      <meta name="twitter:description" content="{{ .Description }}" />
+      <meta name="description" content="{{ .Description }}" />
+      <meta property="og:description" content="{{ .Description }}" />
     {{ else }}
-      {{ with . | postCSS | minify | fingerprint | resources.PostProcess }}
-          <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+      <meta
+        name="twitter:description"
+        content="Portfolio of Mariano Zunino, software engineer and professor from Uruguay. Specializing in GoLang, TypeScript, and distributed systems with projects in CLI tools, web services, and automation." />
+      <meta
+        name="description"
+        content="Portfolio of Mariano Zunino, software engineer and professor from Uruguay. Specializing in GoLang, TypeScript, and distributed systems with projects in CLI tools, web services, and automation." />
+      <meta
+        property="og:description"
+        content="Portfolio of Mariano Zunino, software engineer and professor from Uruguay. Specializing in GoLang, TypeScript, and distributed systems with projects in CLI tools, web services, and automation." />
+    {{ end }}
+
+    {{ $image := .Params.image | default .Site.Params.image }}
+    {{ if $image }}
+      <meta
+        name="twitter:image"
+        content="https://{{ .Site.Params.domain }}{{ $image }}" />
+      <meta
+        property="og:image"
+        content="https://{{ .Site.Params.domain }}{{ $image }}" />
+      <meta property="og:image:width" content="200" />
+      <meta property="og:image:height" content="200" />
+    {{ else }}
+      <meta
+        name="twitter:image"
+        content="https://{{ .Site.Params.domain }}/android-chrome-192x192.png" />
+      <meta
+        property="og:image"
+        content="https://{{ .Site.Params.domain }}/android-chrome-192x192.png" />
+    {{ end }}
+
+
+    <meta
+      name="google-site-verification"
+      content="3kt_YjHglsfi--HId1kgto1G2HgiFgDsvnWmYI05JfU" />
+
+    <meta name="author" content="{{ .Site.Params.author }}" />
+
+    <meta
+      property="og:url"
+      content="https://{{ .Site.Params.domain }}{{ .RelPermalink }}" />
+    <link
+      rel="canonical"
+      href="https://{{ .Site.Params.domain }}{{ .RelPermalink }}" />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="{{ "apple-touch-icon.png" | relURL }}" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="{{ "favicon-32x32.png" | relURL }}" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="{{ "favicon-16x16.png" | relURL }}" />
+
+    <title>{{ .Title }} - {{ .Site.Title }}</title>
+
+    {{ with resources.Get "/css/styles.css" }}
+      {{ if hugo.IsDevelopment }}
+        <link rel="stylesheet" href="{{ .RelPermalink }}" />
+      {{ else }}
+        {{ with . | postCSS | minify | fingerprint | resources.PostProcess }}
+          <link
+            rel="stylesheet"
+            href="{{ .RelPermalink }}"
+            integrity="{{ .Data.Integrity }}"
+            crossorigin="anonymous" />
+        {{ end }}
       {{ end }}
     {{ end }}
-  {{ end }}
-
-  <!-- Early connection hint to Cloudflare CDN -->
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
-
-  <!-- DNS prefetch for Cloudflare CDN -->
-  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
 
 
-  <!-- Optimized Font Awesome stylesheet with lazy loading -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    media="print" onload="this.media='all'" />
-  <script>
-    const isDarkMode = () =>
-      localStorage.theme === 'dark' ||
-      (!('theme' in localStorage) &&
-        window.matchMedia('(prefers-color-scheme: dark)').matches)
-    if (isDarkMode()) {
-      document.documentElement.classList.add('dark')
-    } else {
-      document.documentElement.classList.remove('dark')
-    }
-  </script>
+    <!-- Early connection hint to Cloudflare CDN -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
 
+    <!-- DNS prefetch for Cloudflare CDN -->
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
 
-  {{ if .IsHome }}
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ProfilePage",
-    "mainEntity": {
-      "@type": "Person",
-      "name": "Mariano Zunino",
-      "jobTitle": "Software Engineer",
-      "description": "Software engineer and professor specializing in GoLang, TypeScript, and distributed systems",
-      "url": "https://mzunino.com.uy",
-      "image": "https://mzunino.com.uy/images/profile.jpg",
-      "sameAs": [
-        "https://github.com/marianozunino",
-        "https://linkedin.com/in/mariano-z"
-      ]
-    }
-  }
-  </script>
-  {{ end }}
-
-  <!-- Type-specific schemas -->
-  {{ if eq .Type "til" }}
-    {{ partial "schema/til.html" . }}
-  {{ else if eq .Type "portfolio" }}
-    {{ partial "schema/portfolio.html" . }}
-  {{ end }}
-</head>
-
-
-<body>
-  {{ partial "nav.html" . }}
-  <main>
-    {{ block "main" . }}{{ end }}
-  </main>
-
-  <button id="backToTop" class="back-to-top" aria-label="Back to top">
-    <i class="fa-solid fa-arrow-up"></i>
-  </button>
-
-  <script>
-    // Back to Top button functionality
-    const backToTopButton = document.getElementById('backToTop')
-
-    // Show button when user scrolls down 300px
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 300) {
-        backToTopButton.classList.add('visible')
-      } else {
-        backToTopButton.classList.remove('visible')
-      }
-    })
-
-    // Scroll to top when clicked
-    backToTopButton.addEventListener('click', () => {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth',
-      })
-    })
-  </script>
-
-  <script>
-    function updateToggleButtonText() {
-      const toggleButton = document.getElementById('toggleDarkMode')
-      if (!toggleButton) return;
-
+    <!-- Optimized Font Awesome stylesheet with lazy loading -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      media="print"
+      onload="this.media='all'" />
+    <script>
+      const isDarkMode = () =>
+        localStorage.theme === 'dark' ||
+        (!('theme' in localStorage) &&
+          window.matchMedia('(prefers-color-scheme: dark)').matches);
       if (isDarkMode()) {
-        toggleButton.classList.remove('fa-moon')
-        toggleButton.classList.add('fa-sun')
+        document.documentElement.classList.add('dark');
       } else {
-        toggleButton.classList.remove('fa-sun')
-        toggleButton.classList.add('fa-moon')
+        document.documentElement.classList.remove('dark');
       }
-    }
+    </script>
 
-    document.addEventListener('DOMContentLoaded', function () {
-      const toggleButton = document.getElementById('toggleDarkMode')
-      if (!toggleButton) return;
-
-      toggleButton.addEventListener('click', function () {
-        if (isDarkMode()) {
-          localStorage.theme = 'light'
-          document.documentElement.classList.remove('dark')
-        } else {
-          localStorage.theme = 'dark'
-          document.documentElement.classList.add('dark')
+    {{ if .IsHome }}
+      <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "ProfilePage",
+          "mainEntity": {
+            "@type": "Person",
+            "name": "Mariano Zunino",
+            "jobTitle": "Software Engineer",
+            "description": "Software engineer and professor specializing in GoLang, TypeScript, and distributed systems",
+            "url": "https://mzunino.com.uy",
+            "image": "https://mzunino.com.uy/images/profile.jpg",
+            "sameAs": [
+              "https://github.com/marianozunino",
+              "https://linkedin.com/in/mariano-z"
+            ]
+          }
         }
-        updateToggleButtonText()
-      })
+      </script>
+    {{ end }}
 
-      // Initial update for button text based on saved theme
-      if (localStorage.theme === 'dark') {
-        document.documentElement.classList.add('dark')
+
+    <!-- Type-specific schemas -->
+    {{ if eq .Type "til" }}
+      {{ partial "schema/til.html" . }}
+    {{ else if eq .Type "portfolio" }}
+      {{ partial "schema/portfolio.html" . }}
+    {{ end }}
+  </head>
+
+  <body>
+    {{ partial "nav.html" . }}
+    <main>
+      {{ block "main" . }}{{ end }}
+    </main>
+
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script>
+      // Back to Top button functionality
+      const backToTopButton = document.getElementById('backToTop');
+
+      // Show button when user scrolls down 300px
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+          backToTopButton.classList.add('visible');
+        } else {
+          backToTopButton.classList.remove('visible');
+        }
+      });
+
+      // Scroll to top when clicked
+      backToTopButton.addEventListener('click', () => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth',
+        });
+      });
+    </script>
+
+    <script>
+      function updateToggleButtonText() {
+        const toggleButton = document.getElementById('toggleDarkMode');
+        if (!toggleButton) return;
+
+        if (isDarkMode()) {
+          toggleButton.classList.remove('fa-moon');
+          toggleButton.classList.add('fa-sun');
+        } else {
+          toggleButton.classList.remove('fa-sun');
+          toggleButton.classList.add('fa-moon');
+        }
       }
-      updateToggleButtonText()
-    });
-  </script>
-</body>
 
+      document.addEventListener('DOMContentLoaded', function () {
+        const toggleButton = document.getElementById('toggleDarkMode');
+        if (!toggleButton) return;
 
+        toggleButton.addEventListener('click', function () {
+          if (isDarkMode()) {
+            localStorage.theme = 'light';
+            document.documentElement.classList.remove('dark');
+          } else {
+            localStorage.theme = 'dark';
+            document.documentElement.classList.add('dark');
+          }
+          updateToggleButtonText();
+        });
 
+        // Initial update for button text based on saved theme
+        if (localStorage.theme === 'dark') {
+          document.documentElement.classList.add('dark');
+        }
+        updateToggleButtonText();
+      });
+    </script>
+  </body>
 </html>

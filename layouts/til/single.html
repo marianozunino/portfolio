@@ -7,36 +7,40 @@
   <div class="metadata">
     <span class="date">{{ .Date.Format "January 2, 2006" }}</span>
     {{ with .Params.tags }}
-    <span class="tags">
-      {{ range . }}
-      <a href="/tags/{{ . | urlize }}" class="tag">{{ . }}</a>
-      {{ end }}
-    </span>
+      <span class="tags">
+        {{ range . }}
+          <a href="/tags/{{ . | urlize }}" class="tag">{{ . }}</a>
+        {{ end }}
+      </span>
     {{ end }}
   </div>
 
   {{ .Content }}
 
+
   <!-- Get all TIL pages sorted by date -->
-  {{ $tilPages := where .Site.RegularPages "Section" "til" }} 
-  {{ $sortedPages := $tilPages.ByDate }} 
-  {{ $currentPage := . }} 
+  {{ $tilPages := where .Site.RegularPages "Section" "til" }}
+  {{ $sortedPages := $tilPages.ByDate }}
+  {{ $currentPage := . }}
   {{ $currentIndex := -1 }}
 
+
   <!-- Find the current page index -->
-  {{ range $index, $page := $sortedPages }} 
-    {{ if eq $page.RelPermalink $currentPage.RelPermalink }} 
-      {{ $currentIndex = $index }} 
-    {{ end }} 
+  {{ range $index, $page := $sortedPages }}
+    {{ if eq $page.RelPermalink $currentPage.RelPermalink }}
+      {{ $currentIndex = $index }}
+    {{ end }}
   {{ end }}
 
+
   <!-- Calculate previous and next indices -->
-  {{ $prevIndex := sub $currentIndex 1 }} 
+  {{ $prevIndex := sub $currentIndex 1 }}
   {{ $nextIndex := add $currentIndex 1 }}
+
 
   <!-- Navigation links -->
   <div class="project-navigation">
-    {{ if ge $prevIndex 0 }} 
+    {{ if ge $prevIndex 0 }}
       {{ $prevTil := index $sortedPages $prevIndex }}
       <a href="{{ $prevTil.RelPermalink }}" class="nav-link prev">
         <i class="fa-solid fa-arrow-left"></i>
@@ -44,8 +48,8 @@
       </a>
     {{ else }}
       <span></span>
-    {{ end }} 
-    {{ if lt $nextIndex (len $sortedPages) }} 
+    {{ end }}
+    {{ if lt $nextIndex (len $sortedPages) }}
       {{ $nextTil := index $sortedPages $nextIndex }}
       <a href="{{ $nextTil.RelPermalink }}" class="nav-link next">
         {{ $nextTil.Title }}

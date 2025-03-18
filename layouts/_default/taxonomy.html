@@ -7,9 +7,9 @@
 
   <div class="tags-list">
     {{ range .Data.Terms.Alphabetical }}
-    <a href="{{ .Page.RelPermalink }}" class="tag">
-      {{ .Page.Title }} ({{ .Count }})
-    </a>
+      <a href="{{ .Page.RelPermalink }}" class="tag">
+        {{ .Page.Title }} ({{ .Count }})
+      </a>
     {{ end }}
   </div>
 {{ end }}

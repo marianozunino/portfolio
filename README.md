@@ -15,12 +15,14 @@ It was originally built with Eleventy and has been migrated to Hugo for improved
 ### Getting Started
 
 1. Clone the repository
+
    ```bash
    git clone https://github.com/marianozunino/portfolio.git
    cd portfolio
    ```
 
 2. Start the development server
+
    ```bash
    hugo server -D
    ```

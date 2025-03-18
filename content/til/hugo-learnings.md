@@ -30,6 +30,7 @@ The folder structure matters a lot. In my portfolio I had:
 - `til/` - Special templates for my TIL posts
 
 Hugo tries to find the most specific template first. So for my portfolio items, it checks:
+
 1. `layouts/portfolio/single.html`
 2. If missing, falls back to `layouts/_default/single.html`
 
@@ -52,15 +53,15 @@ Other interesting config settings:
 
 ```yaml
 taxonomies:
-  tag: "tags"
+  tag: 'tags'
 ```
 
 This makes Hugo create tag pages automatically.
 
 ```yaml
 disableKinds:
-  - "taxonomy"
-  - "term"
+  - 'taxonomy'
+  - 'term'
 ```
 
 But then I disabled those pages! So I defined tags but don't create separate pages for them - I should probably fix this if I want tag navigation.
@@ -68,6 +69,7 @@ But then I disabled those pages! So I defined tags but don't create separate pag
 ## Template Variables
 
 In templates you use:
+
 - `.Title` - Page title
 - `.Content` - The main content
 - `.RelPermalink` - URL for internal links

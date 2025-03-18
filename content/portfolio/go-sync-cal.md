@@ -1,11 +1,12 @@
 ---
 title: 'Go Sync Cal'
-summary: "Go Sync Cal: Synchronize Your Google Calendars"
+summary: 'Go Sync Cal: Synchronize Your Google Calendars'
 description: 'Project: Go Sync Cal is a GoLang project that enables the synchronization of two Google Calendars'
 source: https://github.com/marianozunino/go-sync-cal
 position: 3
 language: 'GoLang'
 ---
+
 #### Overview
 
 Go Sync Cal is a GoLang project that enables the synchronization of two Google Calendars. This tool is particularly useful for individuals or organizations that need to maintain consistent schedules across multiple email accounts.

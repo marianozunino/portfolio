@@ -6,6 +6,7 @@ description: 'Project: An ugly sdm (strong DM) wrapper to get a better DX under 
 position: 1
 language: 'GoLang'
 ---
+
 #### Overview
 
 SDM UI is a custom wrapper around StrongDM (SDM) designed to improve the developer experience (DX) on Linux.
@@ -25,6 +26,7 @@ of my expectations.
 #### Solution
 
 I faced two options:
+
 - Write a shell script to handle the complexities.
 - Develop a wrapper using a general-purpose language.
 
@@ -35,6 +37,7 @@ libraries to build a robust solution.
 #### Implementation
 
 SDM UI integrates the following libraries:
+
 - **rofi**: Provides a user-friendly GUI for connection management.
 - **keyring**: Manages and stores credentials securely.
 - **clipper**: A clipboard manager for efficient copy-pasting.

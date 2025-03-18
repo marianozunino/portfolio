@@ -1,6 +1,6 @@
 ---
 title: 'Portfolio'
-summary: "My projects and personal experiments"
+summary: 'My projects and personal experiments'
 description: "A collection of projects I've worked on to explore different technologies and solve specific problems."
 ---
 

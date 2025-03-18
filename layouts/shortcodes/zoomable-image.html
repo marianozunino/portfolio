@@ -2,11 +2,12 @@
 {{ $alt := .Get "alt" | default "Image" }}
 {{ $caption := .Get "caption" | default "" }}
 
+
 <figure class="zoomable-image">
   <a href="{{ $src }}" target="_blank">
     <img src="{{ $src }}" alt="{{ $alt }}" title="Click to view full size" />
   </a>
   {{ if $caption }}
-  <figcaption>{{ $caption }}</figcaption>
+    <figcaption>{{ $caption }}</figcaption>
   {{ end }}
 </figure>

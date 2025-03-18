@@ -1,11 +1,12 @@
 ---
 title: 'Go Short'
-summary: "Go Short: URL Shortener"
+summary: 'Go Short: URL Shortener'
 description: 'Project: URL Shortener with GoLang'
 source: https://github.com/marianozunino/go-short
 position: 4
 language: 'GoLang'
 ---
+
 #### Overview
 
 Go Short is a GoLang project designed to shorten URLs.

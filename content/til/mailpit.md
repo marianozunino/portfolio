@@ -29,8 +29,8 @@ services:
     container_name: mailpit
     hostname: mailpit
     ports:
-      - "1025:1025" # SMTP server port
-      - "8025:8025" # Web UI port
+      - '1025:1025' # SMTP server port
+      - '8025:8025' # Web UI port
     environment:
       - PUID=${PUID}
       - PGID=${PGID}
@@ -41,6 +41,7 @@ services:
 ```
 
 The setup is straightforward:
+
 - Port 1025 for the SMTP server (your application connects here)
 - Port 8025 for the web UI to view captured emails
 - Basic authentication for the UI (username: user, password: user)

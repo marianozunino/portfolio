@@ -4,6 +4,7 @@ date: 2025-03-13T01:05:40-03:00
 summary: 'How to setup swayidle and swaylock for automatic screen locking and power management in Sway'
 tags: ['linux', 'sway', 'wayland', 'desktop']
 ---
+
 Today I finally configured swayidle properly on my Sway setup. I wanted my computer to automatically lock, turn off displays and eventually suspend after periods of inactivity.
 
 ## The Setup
@@ -19,6 +20,7 @@ after-resume 'swaymsg "output * power on"'
 ```
 
 This does the following:
+
 - After 5 minutes (300s) of inactivity, run my lock script
 - After 10 minutes (600s), turn off all displays
 - After 10 minutes, also suspend the system (I use suspend-then-hibernate for longer battery life)

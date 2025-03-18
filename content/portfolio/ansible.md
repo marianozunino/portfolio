@@ -1,11 +1,12 @@
 ---
 title: 'Ansible Config'
-summary: "My ansible linux config"
+summary: 'My ansible linux config'
 description: 'My ansible linux config'
 source: https://github.com/marianozunino/ansible
 position: 99
 language: 'Ansible'
 ---
+
 #### Overview
 
 This project contains my Ansible configuration for quickly bootstrapping Linux systems.

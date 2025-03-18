@@ -20,6 +20,7 @@ diff --new-line-format="%L" --unchanged-line-format="" a.sorted b.sorted > missi
 ```
 
 ### Explanation:
+
 - `--new-line-format="%L"` → Prints lines unique to the first file.
 - `--unchanged-line-format=""` → Hides common lines.
 
@@ -32,21 +33,22 @@ comm -23 a.sorted b.sorted > missing.txt
 ```
 
 ### Explanation:
+
 - `-3` → Suppresses the third column (lines common to both files), leaving only unique entries from each file.
 
 ## `comm` vs `diff`
 
 While both `comm` and `diff` compare files line by line, they serve different purposes:
 
-| Feature              | `comm`                                    | `diff` |
-|----------------------|-----------------------------------------|--------|
-| **Comparison Basis**  | Works on sorted files                  | Works on any files |
-| **Sorting Required?** | Yes                                     | No |
-| **Output Format**     | Three-column output (unique & common) | Contextual differences |
-| **Suppressing Output** | Can hide columns (`-1`, `-2`, `-3`)  | No direct way to suppress lines |
-| **Finding Unique Lines** | `comm -23 file1 file2` | `diff --new-line-format="%L" --unchanged-line-format="" file1 file2` |
-| **Finding Common Lines** | `comm -12 file1 file2` | `diff file1 file2 \| grep '^ '` |
-| **Best Used For**     | Comparing sorted lists and extracting unique/common lines | Identifying line-by-line differences |
+| Feature                  | `comm`                                                    | `diff`                                                               |
+| ------------------------ | --------------------------------------------------------- | -------------------------------------------------------------------- |
+| **Comparison Basis**     | Works on sorted files                                     | Works on any files                                                   |
+| **Sorting Required?**    | Yes                                                       | No                                                                   |
+| **Output Format**        | Three-column output (unique & common)                     | Contextual differences                                               |
+| **Suppressing Output**   | Can hide columns (`-1`, `-2`, `-3`)                       | No direct way to suppress lines                                      |
+| **Finding Unique Lines** | `comm -23 file1 file2`                                    | `diff --new-line-format="%L" --unchanged-line-format="" file1 file2` |
+| **Finding Common Lines** | `comm -12 file1 file2`                                    | `diff file1 file2 \| grep '^ '`                                      |
+| **Best Used For**        | Comparing sorted lists and extracting unique/common lines | Identifying line-by-line differences                                 |
 
 ## My Takeaways
 

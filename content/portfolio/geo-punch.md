@@ -1,6 +1,6 @@
 ---
 title: 'Geo Punch'
-summary: "Geo Punch is a GoLang+Flutter project that allows users to clock in and out for work"
+summary: 'Geo Punch is a GoLang+Flutter project that allows users to clock in and out for work'
 description: 'Geo Punch is a GoLang+Flutter project that allows users to clock in and out for work'
 position: 2
 language: 'GoLang'
@@ -26,6 +26,7 @@ to eliminate the need for installations on mobile devices. While PWAs can have
 limitations, the client accepted these in favor of the convenience provided.
 
 The key features of Geo Punch include:
+
 - **Automated Clock-In/Clock-Out**: Employees can easily record their attendance.
 - **Report Generation**: The system can generate reports for overtime, permissions, late arrivals, and more.
 - **No Installation Required**: As a PWA, Geo Punch works directly from the browser, providing a seamless user experience.

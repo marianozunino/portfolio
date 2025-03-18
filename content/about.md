@@ -18,6 +18,7 @@ In addition to my software work, I have a strong interest in teaching and sharin
 Did I also mention that I have two lovely dogs 🐶❤️? They are named <a href="/images/rocco.jpg">Rocco</a> and <a href="/images/mora.jpg">Mora</a>! And here's a photo of them together <a href="/images/babies.jpg">Dogs</a>.
 
 ## Contact
+
 - [CV](/cv/cv.pdf)
 - Email me at <span id="email"></span>
 - <a href="https://github.com/marianozunino" target="_blank">Github</a>

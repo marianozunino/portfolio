@@ -14,8 +14,7 @@
               src="/images/profile.jpg"
               alt="Mariano Zunino"
               class="profile-img"
-              loading="lazy"
-            />
+              loading="lazy" />
           </div>
 
           <p>
@@ -33,17 +32,18 @@
           </p>
 
           <p>
-            Building side projects is another passion of mine, both for enjoyment
-            and profit. For the latter, I often collaborate with my brother
+            Building side projects is another passion of mine, both for
+            enjoyment and profit. For the latter, I often collaborate with my
+            brother
             <a href="https://totozunino.github.io/portfolio/" target="_blank"
               >Mathias</a
             >.
           </p>
 
           <p>
-            In addition to my software work, I have a strong interest in teaching
-            and sharing knowledge. As a professor at FING, I strive to contribute
-            to the community by training and educating others.
+            In addition to my software work, I have a strong interest in
+            teaching and sharing knowledge. As a professor at FING, I strive to
+            contribute to the community by training and educating others.
           </p>
 
           <p>
@@ -80,27 +80,27 @@
     </div>
 
     <script type="text/javascript">
-      document.addEventListener("DOMContentLoaded", function () {
-        var user = "marianoz";
-        var domain = "posteo";
-        var tld = "net";
+      document.addEventListener('DOMContentLoaded', function () {
+        var user = 'marianoz';
+        var domain = 'posteo';
+        var tld = 'net';
 
-        var email = user + "@" + domain + "." + tld;
+        var email = user + '@' + domain + '.' + tld;
 
-        var emailLink = document.createElement("a");
+        var emailLink = document.createElement('a');
         emailLink.href = `mailto:${email}?subject=Hello!&body=Hi%20Mariano!`;
 
-        var icon = document.createElement("i");
-        icon.className = "fa-solid fa-envelope";
+        var icon = document.createElement('i');
+        icon.className = 'fa-solid fa-envelope';
         emailLink.appendChild(icon);
 
-        emailLink.appendChild(document.createTextNode(" "));
+        emailLink.appendChild(document.createTextNode(' '));
 
         emailLink.appendChild(
-          document.createTextNode(user + " [at] " + domain + " [dot] " + tld),
+          document.createTextNode(user + ' [at] ' + domain + ' [dot] ' + tld),
         );
 
-        document.getElementById("email").appendChild(emailLink);
+        document.getElementById('email').appendChild(emailLink);
       });
     </script>
   </div>

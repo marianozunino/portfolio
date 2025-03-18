@@ -1,11 +1,12 @@
 ---
 title: 'Go Dollar'
-summary: "Go Dollar: Fetching Historical US Dollar Prices from the INE"
+summary: 'Go Dollar: Fetching Historical US Dollar Prices from the INE'
 description: 'Project: Go Dollar allows fetching historical US Dollar Prices from the INE'
 source: https://github.com/marianozunino/godollar
 position: 3
 language: 'GoLang'
 ---
+
 #### Overview
 
 Go Dollar is a GoLang project designed to fetch the US Dollar price from the [INE](https://www.gub.uy/instituto-nacional-estadistica/) for recent years.

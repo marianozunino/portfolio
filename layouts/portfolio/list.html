@@ -5,35 +5,41 @@
 
   {{ .Content }}
 
+
   <div class="portfolio-list">
     <!-- Get portfolio pages and sort them by position -->
-    {{ $pages := where .Site.RegularPages "Section" "portfolio" }} {{ $sortedPages
-    := sort $pages ".Params.position" }}
+    {{ $pages := where .Site.RegularPages "Section" "portfolio" }}
+    {{ $sortedPages
+      := sort $pages ".Params.position"
+    }}
+
 
     <!-- Display the sorted pages -->
-    {{ range $sortedPages }} {{ if not (default false .Params.hidden) }}
-    <div class="portfolio-item">
-      <h3 class="item-title">
-        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-      </h3>
+    {{ range $sortedPages }}
+      {{ if not (default false .Params.hidden) }}
+        <div class="portfolio-item">
+          <h3 class="item-title">
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+          </h3>
 
-      {{ with .Params.summary }}
-      <p class="item-summary">{{ . }}</p>
+          {{ with .Params.summary }}
+            <p class="item-summary">{{ . }}</p>
+          {{ end }}
+
+
+          <div class="item-meta">
+            {{ if .Params.source }}
+              <a
+                href="{{ .Params.source }}"
+                class="source-link"
+                target="_blank"
+                rel="noopener noreferrer">
+                <i class="fa-regular fa-file-code"></i> Source
+              </a>
+            {{ end }}
+          </div>
+        </div>
       {{ end }}
-
-      <div class="item-meta">
-        {{ if .Params.source }}
-        <a
-          href="{{ .Params.source }}"
-          class="source-link"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <i class="fa-regular fa-file-code"></i> Source
-        </a>
-        {{ end }}
-      </div>
-    </div>
-    {{ end }} {{ end }}
+    {{ end }}
   </div>
 {{ end }}

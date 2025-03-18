@@ -7,22 +7,33 @@
   <h1>{{ .Title }}</h1>
   <div class="portfolio-links">
     {{ if .Params.deployed }}
-    <a class="port-link" href="{{ .Params.deployed }}" target="_blank" rel="noopener noreferrer">
-      Deployed
-    </a>
-    {{ end }} {{ if .Params.source }}
-    <a class="port-link" href="{{ .Params.source }}" target="_blank" rel="noopener noreferrer">
-      Source
-      <i class="fa-regular fa-file-code"></i>
-    </a>
+      <a
+        class="port-link"
+        href="{{ .Params.deployed }}"
+        target="_blank"
+        rel="noopener noreferrer">
+        Deployed
+      </a>
+    {{ end }}
+    {{ if .Params.source }}
+      <a
+        class="port-link"
+        href="{{ .Params.source }}"
+        target="_blank"
+        rel="noopener noreferrer">
+        Source
+        <i class="fa-regular fa-file-code"></i>
+      </a>
     {{ end }}
   </div>
 
   {{ .Content }}
 
+
   <!-- Get all portfolio pages and sort them by position parameter -->
   {{ $portfolioPages := where .Site.RegularPages "Section" "portfolio" }}
   {{ $sortedPages := sort $portfolioPages ".Params.position" }}
+
 
   <!-- Filter out hidden pages -->
   {{ $visiblePages := slice }}
@@ -36,29 +47,34 @@
   {{ $currentPage := . }}
   {{ $currentIndex := -1 }}
 
+
   <!-- Find the current page index -->
-  {{ range $index, $page := $visiblePages }} 
-    {{ if eq $page.RelPermalink $currentPage.RelPermalink }} 
-      {{ $currentIndex = $index }} 
-    {{ end }} 
+  {{ range $index, $page := $visiblePages }}
+    {{ if eq $page.RelPermalink $currentPage.RelPermalink }}
+      {{ $currentIndex = $index }}
+    {{ end }}
   {{ end }}
+
 
   <!-- Calculate previous and next indices -->
-  {{ $prevIndex := sub $currentIndex 1 }} 
+  {{ $prevIndex := sub $currentIndex 1 }}
   {{ $nextIndex := add $currentIndex 1 }}
 
+
   <!-- Handle wrapping around the ends -->
-  {{ if lt $prevIndex 0 }} 
-    {{ $prevIndex = sub (len $visiblePages) 1 }} 
+  {{ if lt $prevIndex 0 }}
+    {{ $prevIndex = sub (len $visiblePages) 1 }}
   {{ end }}
 
-  {{ if ge $nextIndex (len $visiblePages) }} 
-    {{ $nextIndex = 0 }} 
+  {{ if ge $nextIndex (len $visiblePages) }}
+    {{ $nextIndex = 0 }}
   {{ end }}
+
 
   <!-- Get the previous and next pages -->
-  {{ $prevProject := index $visiblePages $prevIndex }} 
+  {{ $prevProject := index $visiblePages $prevIndex }}
   {{ $nextProject := index $visiblePages $nextIndex }}
+
 
   <div class="project-navigation">
     <a href="{{ $prevProject.RelPermalink }}" class="nav-link prev">

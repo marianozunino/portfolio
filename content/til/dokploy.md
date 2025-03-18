@@ -8,9 +8,11 @@ summary: "The deployment solution that I wasn't looking for"
 ## My Current Setup
 
 ### Hardware
+
 - Raspberry Pi 4 with an external SSD
 
 ### OS
+
 - DietPi
 
 ## Current Orchestration

@@ -5,23 +5,29 @@
 
   {{ .Content }}
 
+
   <ul>
     <!-- Get portfolio pages and try to sort them by position -->
     {{ $pages := where .Site.RegularPages "Section" "portfolio" }}
 
+
     <!-- Try position-based sorting first -->
     {{ $positionPages := sort $pages ".Params.position" }}
 
-    <!-- Display the sorted pages -->
-    {{ range $positionPages }} {{ if not (default false .Params.hidden) }}
-    <li>
-      {{ if .Params.source }}
-      <i class="fa-regular fa-file-code"></i>
-      {{ end }}
 
-      <a class="post-link" href="{{ .RelPermalink }}">{{ .Title }}</a>
-      {{ with .Params.summary }} - {{ . }}{{ end }}
-    </li>
-    {{ end }} {{ end }}
+    <!-- Display the sorted pages -->
+    {{ range $positionPages }}
+      {{ if not (default false .Params.hidden) }}
+        <li>
+          {{ if .Params.source }}
+            <i class="fa-regular fa-file-code"></i>
+          {{ end }}
+
+
+          <a class="post-link" href="{{ .RelPermalink }}">{{ .Title }}</a>
+          {{ with .Params.summary }}- {{ . }}{{ end }}
+        </li>
+      {{ end }}
+    {{ end }}
   </ul>
 {{ end }}

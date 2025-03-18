@@ -1,11 +1,12 @@
 ---
 title: 'OpenSSL TS Wrapper'
-summary: "OpenSSL TS Wrapper: Simplifying OpenSSL Usage in Node.js"
+summary: 'OpenSSL TS Wrapper: Simplifying OpenSSL Usage in Node.js'
 source: https://github.com/marianozunino/openssl-ts
 description: 'Project: OpenSSL TS Wrapper: Simplifying OpenSSL Usage in Node.js'
 position: 4
 language: 'TypeScript'
 ---
+
 #### Overview
 
 OpenSSL TS Wrapper is a modern, dependency-free OpenSSL wrapper written in TypeScript.

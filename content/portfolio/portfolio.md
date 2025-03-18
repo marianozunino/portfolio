@@ -1,12 +1,13 @@
 ---
 title: 'Portfolio Site'
-summary: "My personal portfolio website built with Hugo"
+summary: 'My personal portfolio website built with Hugo'
 source: https://github.com/marianozunino/portfolio
 url: /portfolio-hugo/
 description: 'Project: My personal portfolio website built with Hugo static site generator'
 position: 98
 language: Markdown
 ---
+
 #### Overview
 
 This is the repository for my personal portfolio website, which you're currently browsing. It's built with Hugo, a fast and flexible static site generator.
