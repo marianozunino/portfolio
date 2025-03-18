@@ -1,0 +1,77 @@
+<div class="terminal-prompt">
+  <span class="spacer"></span>
+  <span class="lambda">λ</span>
+  <span class="arrow"> › </span>
+  <span class="spacer"></span>
+  <span class="user" id="typed-text"></span>
+  <span class="cursor">▋</span>
+</div>
+
+<style>
+  .terminal-prompt {
+    font-family: monospace;
+    font-size: 1.1rem;
+    padding: 0.5rem 0;
+    display: flex;
+    align-items: center;
+  }
+  .lambda {
+    color: #8b5cf6;
+  }
+  .arrow {
+    color: #3b82f6;
+  }
+  .spacer {
+    width: 0.75rem;
+    display: inline-block;
+  }
+  .user {
+    color: #1f2937;
+  }
+  .cursor {
+    color: #000000;
+    margin-left: 0.25rem;
+    animation: blink 1.06s infinite;
+  }
+  .dark .lambda {
+    color: #a78bfa;
+  }
+  .dark .arrow {
+    color: #60a5fa;
+  }
+  .dark .user {
+    color: #9ca3af;
+  }
+  .dark .cursor {
+    color: white;
+  }
+  @keyframes blink {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const text = "Mariano Zunino";
+    const typedTextElement = document.getElementById("typed-text");
+    let i = 0;
+
+    function typeWriter() {
+      if (i < text.length) {
+        typedTextElement.textContent += text.charAt(i);
+        i++;
+
+        const delay = 50 + Math.random() * 30;
+        setTimeout(typeWriter, delay);
+      }
+    }
+
+    setTimeout(typeWriter, 700);
+  });
+</script>
