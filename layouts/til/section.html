@@ -5,12 +5,42 @@
 
   {{ .Content }}
 
-  <ul>
+  <!-- Simple tag navigation -->
+  <div class="tags-overview">
+    <h2>Browse by tag</h2>
+    <div class="tags-list">
+      {{ $tags := slice }}
+      {{ range .Pages }}
+        {{ range .Params.tags }}
+          {{ $tags = $tags | append . }}
+        {{ end }}
+      {{ end }}
+      
+      {{ $tagCounts := dict }}
+      {{ range $tags }}
+        {{ $tagCounts = merge $tagCounts (dict . (add (index $tagCounts . | default 0) 1)) }}
+      {{ end }}
+      
+      {{ range $tag, $count := $tagCounts }}
+        <a href="/tags/{{ $tag | urlize }}" class="tag">
+          {{ $tag }} ({{ $count }})
+        </a>
+      {{ end }}
+    </div>
+  </div>
+
+  <!-- TIL entries as a clean list -->
+  <h2>All Entries</h2>
+  <ul class="til-list">
     {{ range .Pages.ByDate.Reverse }}
-    <li>
-      <span class="small">{{ .Date.Format "2006-01-02" }}</span>
-      <a class="post-link" href="{{ .RelPermalink }}">{{ .Title }}</a>
-      {{ with .Params.summary }} - {{ . }}{{ end }}
+    <li class="til-entry">
+      <div class="til-entry-header">
+        <span class="til-date">{{ .Date.Format "2006-01-02" }}</span>
+        <a class="til-title" href="{{ .RelPermalink }}">{{ .Title }}</a>
+      </div>
+      {{ if .Params.summary }}
+      <p class="til-summary">{{ .Params.summary }}</p>
+      {{ end }}
     </li>
     {{ end }}
   </ul>
