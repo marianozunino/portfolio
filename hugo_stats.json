@@ -121,12 +121,14 @@
       "crapis",
       "creating-custom-completion-functions",
       "current-orchestration",
+      "diagnosing-with-zmodload-zshzprof",
       "dokku",
       "dokploy",
       "dumb-go-example",
       "email",
       "explanation",
       "explanation-1",
+      "finding-a-solution",
       "golang-httpdetectcontenttype",
       "hardware",
       "how-i-use-it",
@@ -141,6 +143,7 @@
       "more-built-in-completion-functions",
       "motivation",
       "my-current-setup",
+      "my-custom-setup",
       "my-takeaways",
       "nav-toggle",
       "options",
@@ -159,6 +162,7 @@
       "the-key-insight",
       "the-problem",
       "the-result",
+      "the-results",
       "the-setup",
       "the-solution",
       "the-solution-compdef",
@@ -166,7 +170,8 @@
       "update-2024-08-30",
       "what-i-used-to-do",
       "why-0x0st",
-      "why-dokploy-works-for-me"
+      "why-dokploy-works-for-me",
+      "zsh-defer-the-game-changer"
     ]
   }
 }
