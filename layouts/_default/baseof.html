@@ -192,41 +192,5 @@
       });
     </script>
 
-    <script>
-      function updateToggleButtonText() {
-        const toggleButton = document.getElementById('toggleDarkMode');
-        if (!toggleButton) return;
-
-        if (isDarkMode()) {
-          toggleButton.classList.remove('fa-moon');
-          toggleButton.classList.add('fa-sun');
-        } else {
-          toggleButton.classList.remove('fa-sun');
-          toggleButton.classList.add('fa-moon');
-        }
-      }
-
-      document.addEventListener('DOMContentLoaded', function () {
-        const toggleButton = document.getElementById('toggleDarkMode');
-        if (!toggleButton) return;
-
-        toggleButton.addEventListener('click', function () {
-          if (isDarkMode()) {
-            localStorage.theme = 'light';
-            document.documentElement.classList.remove('dark');
-          } else {
-            localStorage.theme = 'dark';
-            document.documentElement.classList.add('dark');
-          }
-          updateToggleButtonText();
-        });
-
-        // Initial update for button text based on saved theme
-        if (localStorage.theme === 'dark') {
-          document.documentElement.classList.add('dark');
-        }
-        updateToggleButtonText();
-      });
-    </script>
   </body>
 </html>

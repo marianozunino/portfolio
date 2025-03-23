@@ -59,4 +59,8 @@
       <span></span>
     {{ end }}
   </div>
+
+  {{ if (findRE "<pre" .Content 1) }}
+      <script src="/js/copy-button.js"></script>
+  {{ end }}
 {{ end }}

@@ -13,6 +13,8 @@ const purgecss = purgeCSSPlugin({
     "fa-sun",
     "back-to-top",
     "visible",
+    "copy-code-button",
+    "highlight",
 
     /^fa-/, // All Font Awesome classes
     /^portfolio-/, // All portfolio-related classes
