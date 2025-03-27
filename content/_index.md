@@ -1,5 +1,5 @@
 ---
-title: Mariano Zunino
+title: Home
 description: 'Software engineer and professor specializing in GoLang, TypeScript, and distributed systems. Based in Montevideo, Uruguay.'
 ---
 
