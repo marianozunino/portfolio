@@ -61,3 +61,8 @@ Compared to FreeDNS and similar services:
 - **Automation**: Flexible scheduling options with proper error handling
 - **Cost Effective**: Free tier of Cloudflare is more than sufficient for personal use
 
+
+
+{{< zoomable-image src="/images/portfolio/ddns.jpg"
+                   alt="Screenshot of DDNS"
+                   caption="Screenshot of DDNS" >}}
