@@ -1,21 +1,21 @@
 ---
 title: About Me
-description: "I'm Mariano, a software engineer from Montevideo, Uruguay. I pursued my Tecnólogo en Informática degree at Fing after several years working as an IT Technician (which comes handy when dealing with infrastructure)."
+description: "I'm Mariano, a software engineer from Montevideo, Uruguay. I studied Computer Science at FING after several years working as an IT Technician — a background that still helps me a lot when dealing with infrastructure."
 type: about
 layout: about
 ---
 
 Hello!
 
-I'm Mariano, a software engineer from Montevideo, Uruguay. I pursued my Technologist Degree in Computer Science at <a href="https://www.fing.edu.uy/" target="_blank">Fing</a> after several years working as an IT Technician (which comes handy when dealing with infrastructure).
+I'm Mariano, a software engineer from Montevideo, Uruguay. After several years working as an IT Technician, I pursued a Technologist Degree in Computer Science at <a href="https://www.fing.edu.uy/" target="_blank">FING</a>. That hands-on background with infrastructure still proves useful in my work today.
 
-I enjoy expanding my knowledge and although I wouldn't call myself a bookworm, I love reading compelling books, especially those on computer science.
+I’m always curious and love diving into new areas of computer science. While I wouldn’t call myself a bookworm, I enjoy reading compelling books, especially those related to programming and systems.
 
-Building side projects is another passion of mine, both for enjoyment and profit. For the latter, I often collaborate with my brother <a href="https://totozunino.github.io/portfolio/" target="_blank">Mathias</a>.
+Building side projects is another passion of mine. Some are just for fun, others grow into useful products. For the latter, I often collaborate with my brother <a href="https://totozunino.github.io/portfolio/" target="_blank">Mathias</a>.
 
-In addition to my software work, I have a strong interest in teaching and sharing knowledge. As a professor at FING, I strive to contribute to the community by training and educating others.
+In addition to software development, I have a strong interest in teaching and sharing knowledge. As a professor at FING, I strive to train and inspire students. My favorite subject to teach is _Data Structures and Algorithms (EDA)_ — it’s where I get to see students sharpen their problem-solving skills and start thinking like computer scientists.
 
-Did I also mention that I have two lovely dogs 🐶❤️? They are named <a href="/images/rocco.jpg">Rocco</a> and <a href="/images/mora.jpg">Mora</a>! And here's a photo of them together <a href="/images/babies.jpg">Dogs</a>.
+Outside of work, I spend time with my two lovely dogs 🐶❤️: <a href="/images/rocco.jpg">Rocco</a> and <a href="/images/mora.jpg">Mora</a>. Here’s a photo of them together: <a href="/images/babies.jpg">Dogs</a>.
 
 ## Contact
 
@@ -26,22 +26,16 @@ Did I also mention that I have two lovely dogs 🐶❤️? They are named <a hre
 
 <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", function() {
-        // Define the email parts
         var user = "marianoz";
         var domain = "posteo";
         var tld = "net";
 
-        // Construct the email address
         var email = user + "@" + domain + "." + tld;
 
-        // Create the email link element
         var emailLink = document.createElement("a");
         emailLink.href = `mailto:${email}?subject=Hello!&body=Hi%20Mariano!`;
-
-        // Display the obfuscated email address
         emailLink.textContent = user + " [at] " + domain + " [dot] " + tld;
 
-        // Append the email link to the span
         document.getElementById("email").appendChild(emailLink);
     });
 </script>
