@@ -25,7 +25,7 @@ ignoreLogs:
 
 # Customize permalinks
 permalinks:
-  portfolio: "/portfolio/:filename/"
+  portfolio: "/portfolio/:contentbasename/"
   til: "/til/:year/:month/:slug/"
 
 # Add this to your config.yaml
