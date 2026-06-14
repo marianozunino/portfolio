@@ -1,24 +1,24 @@
 {
-  "name": "hugo-purgecss-example",
+  "name": "portfolio",
   "version": "1.0.0",
   "private": true,
-  "description": "Using PostCSS and PurgeCSS with Hugo Test",
-  "homepage": "https://purgecss-test.christianoliff.com",
+  "description": "Personal portfolio site for Mariano Zunino, built with Hugo.",
+  "homepage": "https://mzunino.com.uy/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/coliff/purgecss-test"
+    "url": "https://github.com/marianozunino/marianozunino.github.io"
   },
-  "author": "C.Oliff (https://christianoliff.com)",
+  "author": "Mariano Zunino",
   "scripts": {
     "build": "npx hugo",
     "serve": "npx hugo serve --port 4000 --disableFastRender --ignoreCache --navigateToChanged"
   },
   "devDependencies": {
-    "@fullhuman/postcss-purgecss": "7.0.2",
-    "autoprefixer": "10.4.21",
-    "postcss": "8.5.3",
+    "@fullhuman/postcss-purgecss": "8.0.0",
+    "autoprefixer": "10.5.0",
+    "postcss": "8.5.15",
     "postcss-cli": "11.0.1",
-    "prettier": "3.5.3",
+    "prettier": "3.8.4",
     "prettier-plugin-go-template": "0.0.15"
   },
   "hugo-bin": {

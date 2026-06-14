@@ -1,5 +1,5 @@
 baseURL: "https://mzunino.com.uy/"
-languageCode: "en-us"
+locale: "en-us"
 title: "Mariano Zunino"
 enableGitInfo: false
 

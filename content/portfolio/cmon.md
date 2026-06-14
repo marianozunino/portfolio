@@ -3,7 +3,7 @@ title: 'cmon'
 summary: 'A small file watcher that auto-recompiles and reruns C/C++ projects on every save'
 description: 'A single binary Go tool that watches a C/C++ project, recompiles it when a file changes and runs it again. I use it while teaching C so the class sees the effect of a change right away'
 source: https://git.mz.uy/marianozunino/cmon
-position: 0
+position: 2
 language: 'GoLang'
 ---
 

@@ -1,5 +1,5 @@
 const autoprefixer = require("autoprefixer");
-const purgeCSSPlugin = require("@fullhuman/postcss-purgecss").default;
+const purgeCSSPlugin = require("@fullhuman/postcss-purgecss");
 const purgecss = purgeCSSPlugin({
   content: ["./hugo_stats.json"],
   defaultExtractor: (content) => {

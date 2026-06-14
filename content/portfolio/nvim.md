@@ -2,7 +2,7 @@
 title: 'Neovim Config'
 summary: 'My personal Neovim configuration'
 description: 'My customized Neovim setup'
-source: https://github.com/marianozunino/nvim
+source: https://git.mz.uy/marianozunino/nvim
 position: 98
 language: lua
 ---

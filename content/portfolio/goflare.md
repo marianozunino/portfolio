@@ -3,7 +3,7 @@ title: 'Goflare'
 summary: 'Dynamic DNS updater for Cloudflare with a Vue frontend, successor of my DDNS Manager'
 description: 'A single binary Go app that keeps Cloudflare DNS records updated with your public IP. Multiple IP providers with fallback, static records, and a Vue 3 web UI'
 source: https://git.mz.uy/marianozunino/goflare
-position: -2
+position: 0
 language: 'GoLang'
 ---
 
@@ -12,6 +12,10 @@ language: 'GoLang'
 Goflare is a self-hosted dynamic DNS updater for Cloudflare. It checks my public IP every so often and updates the DNS records when it changes, all through a small web interface to manage zones and records.
 
 It's basically the next version of my [DDNS Manager](/portfolio/ddns/). Same idea, but rebuilt with a proper frontend and a few things I wanted to fix.
+
+{{< zoomable-image src="/images/portfolio/goflare.jpg"
+                   alt="Goflare dashboard showing public IP, zones and record counts"
+                   caption="Dashboard (public IP blurred)" >}}
 
 #### Motivation
 
@@ -36,6 +40,14 @@ So instead of patching the old one I started again from scratch.
 #### How it works
 
 A scheduled task gets my public IP from one of several providers (if one fails it tries the next), and compares it with the records I have configured. If it changed, it updates them on Cloudflare. Records marked as static are left alone, which is useful for the ones that should not follow my dynamic IP.
+
+{{< zoomable-image src="/images/portfolio/goflare-2.jpg"
+                   alt="Goflare records view with dynamic and static records"
+                   caption="Records, split into dynamic and static (names and values blurred)" >}}
+
+{{< zoomable-image src="/images/portfolio/goflare-3.jpg"
+                   alt="Goflare settings with cron schedule and IP providers"
+                   caption="Settings: cron schedule and the ordered list of IP providers" >}}
 
 #### Why it's better than the old one
 

@@ -3,7 +3,7 @@ title: 'Code'
 summary: 'CLI tool for quickly navigating and opening development projects in Neovim with MRU tracking'
 description: 'A Go-based command-line utility that simplifies navigation between projects by providing fuzzy finding capabilities and tracking most recently used projects, optimized for Sway, kitty, and Neovim.'
 source: https://github.com/marianozunino/code
-position: 0
+position: 2
 language: 'GoLang'
 ---
 

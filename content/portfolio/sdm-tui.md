@@ -3,7 +3,7 @@ title: 'SDM TUI'
 summary: A terminal UI wrapping the StrongDM (sdm) CLI for a better DX under Linux
 source: https://git.mz.uy/marianozunino/sdm-tui
 description: 'Project: A terminal UI wrapping the StrongDM (sdm) CLI for a better DX under Linux'
-position: 1
+position: 3
 language: 'GoLang'
 aliases:
   - /portfolio/sdm-ui/

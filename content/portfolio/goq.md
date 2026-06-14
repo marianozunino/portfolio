@@ -3,7 +3,7 @@ title: 'GOQ (Goku)'
 summary: A simple CLI tool for consuming RabbitMQ messages and saving them to files
 source: https://github.com/marianozunino/goq
 description: 'Project: A lightweight CLI for RabbitMQ message consumption.'
-position: 0
+position: 2
 language: 'GoLang'
 ---
 

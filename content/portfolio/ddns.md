@@ -3,7 +3,7 @@ title: 'DDNS Manager'
 summary: 'Self-hosted Dynamic DNS manager with Cloudflare integration and automated IP updates'
 description: 'A Go-based web application that simplifies DNS record management through Cloudflare API with automatic IP detection and scheduled updates for dynamic DNS scenarios'
 source: https://git.mz.uy/marianozunino/ddns
-position: 0
+position: 2
 language: 'GoLang'
 ---
 
