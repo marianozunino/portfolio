@@ -1,15 +1,15 @@
 ---
-title: 'SDM UI'
-summary: An ugly sdm (strong DM) wrapper to get a better DX under linux
-source: https://github.com/marianozunino/sdm-ui
-description: 'Project: An ugly sdm (strong DM) wrapper to get a better DX under linux'
+title: 'SDM TUI'
+summary: A terminal UI wrapping the StrongDM (sdm) CLI for a better DX under Linux
+source: https://git.mz.uy/marianozunino/sdm-tui
+description: 'Project: A terminal UI wrapping the StrongDM (sdm) CLI for a better DX under Linux'
 position: 1
 language: 'GoLang'
 ---
 
 #### Overview
 
-SDM UI is a custom wrapper around StrongDM (SDM) designed to improve the developer experience (DX) on Linux.
+SDM TUI is a custom wrapper around StrongDM (SDM) designed to improve the developer experience (DX) on Linux.
 
 #### Motivation
 
@@ -36,15 +36,13 @@ libraries to build a robust solution.
 
 #### Implementation
 
-SDM UI integrates the following libraries:
+It's written in Go with [Bubble Tea](https://github.com/charmbracelet/bubbletea)
+for the TUI, plus Bubbles and Lip Gloss for the widgets and styling.
 
-- **rofi**: Provides a user-friendly GUI for connection management.
-- **keyring**: Manages and stores credentials securely.
-- **clipper**: A clipboard manager for efficient copy-pasting.
-- **bbolt**: A performant key-value database for storing connection details.
+It wraps the `sdm` CLI so I can browse and filter the resources, connect with one
+keypress (it copies the address to the clipboard), disconnect one or all of them,
+and log in again when the session expires. It also sends a desktop notification
+with `notify-send` when something changes.
 
-This combination resulted in a more efficient and user-friendly tool for managing
-StrongDM connections on Linux.
-
-By creating SDM UI, I improved the overall developer experience, making it easier
-to manage numerous connections and enhancing productivity.
+The first version used rofi as a GUI. I moved it to a TUI because the terminal is
+where I actually spend my time, and it just feels better (to me).

@@ -130,6 +130,7 @@
       "collaboration",
       "comm-vs-diff",
       "conclusion",
+      "config",
       "config-settings",
       "confusing-parts",
       "contact",
@@ -188,6 +189,7 @@
       "real-world-example-2048-game",
       "smart-script-detection",
       "solution",
+      "stack",
       "summary",
       "sway-configuration",
       "tagToggle",
@@ -226,6 +228,7 @@
       "why-0x0st",
       "why-dokploy-works-for-me",
       "why-go-instead-of-pure-shell",
+      "why-its-better-than-the-old-one",
       "why-this-changed-everything",
       "why-this-works-better",
       "zsh-defer-the-game-changer"

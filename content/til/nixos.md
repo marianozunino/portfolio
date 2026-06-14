@@ -59,7 +59,7 @@ It makes working with NixOS much easier. Instead of remembering long `nixos-rebu
 
 ### Version Controlling My System
 
-Being able to version control my entire system configuration is wild, and I love it. All my system settings are in a git repository, which means I can track changes, roll back if needed, and easily replicate my setup on new machines.
+Being able to version control my entire system configuration is wild, and I love it. All my system settings are in a [git repository](https://git.mz.uy/marianozunino/nixos), which means I can track changes, roll back if needed, and easily replicate my setup on new machines.
 
 I even created a simple alias called `nu` (short for "nix-up") that commits my NixOS changes and pushes them to a bare repository on one of my VPS. This makes it easy to keep my system configuration backed up and synced across machines.
 
